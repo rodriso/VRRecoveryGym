@@ -1,0 +1,42 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Lista de cambios no controlados predeterminada",
+			"files": [
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/VRTemplate/Maps/VRTemplateMap.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/WBP_MainMenu.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/Level_MenuPrincipal.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/WPB_Credits.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/Level_Credits.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/Imagenes/Fondo.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/WBP_Registro.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/VRTemplate/Blueprints/VRGameMode.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/VRTemplate/Maps/VRTemplateMap_BuiltData.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/Levels/Level_Credits.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/Levels/Level_MenuPrincipal.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/NewFolder/WBP_MainMenu.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/NewFolder/WBP_Registro.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/NewFolder/WPB_Credits.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/Saves/BP_PlayerSave.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WBP_MainMenu.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WBP_Registro.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WPB_Credits.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WBP_PuzzleSelection.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WBP_PuzzleItem.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/Levels/Level_NewGame.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WPB_Register.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/Saves/PuzzleInfo.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/Levels/Level_GameList.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BluePrints/WBP_GamesList.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/BP_PlayerSave.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/BD/BP_PlayerSave.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/WBP_PlayerNameInput.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/Level_Registro.umap",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/Fondo.uasset",
+				"C:/Users/rodri/Documents/Unreal Projects/TFG/Content/UI/InterfazInicio.uasset"
+			]
+		}
+	]
+}
