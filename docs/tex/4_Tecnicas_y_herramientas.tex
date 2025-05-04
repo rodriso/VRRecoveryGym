@@ -1,6 +1,39 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
-No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
+En esta sección se presentan algunas de las herramientas fundamentales empleadas en el desarrollo del proyecto.
+\section{Herramientas}
+\subsection{Unreal Engine}
 
+Unreal Engine es un motor gráfico y de desarrollo de juegos en tiempo real desarrollado por Epic Games. Su arquitectura modular y su potente editor visual permiten diseñar, iterar y desplegar entornos 3D de alta fidelidad para aplicaciones que van desde videojuegos hasta simulaciones VR y AR. Para este proyecto se ha utilizado Unreal Engine 5, aprovechando sus siguientes características principales:
 
+\begin{itemize}
+  \item \textbf{Editor de niveles y blueprints:} interfaz WYSIWYG para construir escenas y lógica de juego mediante nodos, sin necesidad de programar directamente en C++.
+  \item \textbf{Renderizado de última generación:} soporte para Nanite (geometría virtualizada) y Lumen (iluminación global dinámica), que permiten obtener gráficos realistas en tiempo real.
+  \item \textbf{Soporte nativo de Realidad Virtual:} integración con SDKs de dispositivos HMD (Oculus, SteamVR, etc.), sistemas de tracking y controladores hápticos.
+\end{itemize}
+
+Para la integración de la interfaz de usuario en RV se ha empleado el sistema UMG (Unreal Motion Graphics), lo que ha permitido diseñar menús y HUDs directamente dentro del entorno 3D.
+
+\subsection{Blueprints} 
+Las Blueprints constituyen el sistema de scripting visual de Unreal Engine que permite definir la lógica de juego y comportamiento de objetos sin escribir código en C++ directamente. Basado en un paradigma de programación orientada a objetos y data flow, Blueprints ofrece una interfaz de nodos conectables que representan:
+
+\textbf{Clases y Actores:} cada Blueprint es esencialmente una subclase de \textit{UObject} o \textit{AActor}, con variables (propiedades), funciones y eventos propios.
+
+\textbf{Graph Editor:} el Event Graph agrupa nodos de eventos (p. ej., BeginPlay, Tick, entradas de usuario) con nodos de ejecución (funciones, macros, secuencias lógicas) que conectan flujos de datos y control.
+
+\textbf{Construction Script:} un grafo especial que se ejecuta en el editor para inicializar propiedades y componentes antes del runtime.
+
+\textbf{Typed Nodes:} Blueprints maneja múltiples tipos de nodos (“Event”, “Function”, “Macro”, “Interface”, “Custom Event”), cada uno con firma de entrada/salida, lo que facilita la reutilización de lógica.
+
+\textbf{Compilación y VM:} al guardar un Blueprint, Unreal compila el grafo a un bytecode que corre en la Blueprint Virtual Machine, garantizando rendimiento y depuración (breakpoints, watch variables) similares a código nativo \cite{epicBlueprints}.
+
+\subsection{Blender}
+
+Blender es una suite de creación 3D de código abierto que incluye herramientas para modelado, escultura, texturizado y exportación de geometrías. En este proyecto, su uso se ha centrado exclusivamente en la preparación de los modelos 3D proporcionados en formato STL y su posterior exportación para Unreal Engine:
+
+\begin{itemize}
+  \item \textbf{Importación de STL:} carga de los ficheros STL originales, comprobación de integridad del modelo.
+  \item \textbf{Ajuste de escala y orientación:} normalización de las dimensiones del modelo y alineación de los ejes para que coincidan con las unidades y el sistema de coordenadas de Unreal Engine.
+  \item \textbf{Conversión y exportación:} exportación del modelo en formatos compatibles (FBX u OBJ), asegurando que las normales de las caras permanezcan orientadas correctamente y que no se pierda información geométrica al importar en Unreal Engine.
+  
+\end{itemize}

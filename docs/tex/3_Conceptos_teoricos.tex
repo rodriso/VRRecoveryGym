@@ -1,83 +1,45 @@
 \capitulo{3}{Conceptos teóricos}
+\section{Realidad virtual}
 
-En aquellos proyectos que necesiten para su comprensión y desarrollo de unos conceptos teóricos de una determinada materia o de un determinado dominio de conocimiento, debe existir un apartado que sintetice dichos conceptos.
+Se entiende por realidad virtual (RV) la tecnología que permite crear entornos digitales tridimensionales, interactivos y en tiempo real, de forma que el usuario perciba la sensación de “estar presente” en dicho entorno. Este grado de inmersión y “telepresencia” se consigue mediante la combinación de hardware (cascos HMD, sistemas de tracking, interfaces hápticas) y software (motores gráficos, algoritmos de simulación) que actualizan la escena virtual en función de los movimientos y acciones del usuario \cite{steuer92,sherman2002}.
 
-Algunos conceptos teóricos de \LaTeX{} \footnote{Créditos a los proyectos de Álvaro López Cantero: Configurador de Presupuestos y Roberto Izquierdo Amo: PLQuiz}.
+Dentro del estudio de la RV suelen distinguirse tres características fundamentales:
 
-\section{Secciones}
+\textbf{Inmersión:} grado en que el sistema aísla y sustituye estímulos sensoriales reales por estímulos generados artificialmente, creando la impresión directa de “estar dentro” del entorno virtual \cite{milgram94}.
 
-Las secciones se incluyen con el comando section.
+\textbf{Presencia:} sensación subjetiva de “estar realmente” en el escenario virtual, más allá de la mera percepción sensorial \cite{sherman2002,slater94}.
 
-\subsection{Subsecciones}
+\textbf{Interactividad:} capacidad del sistema para registrar las acciones del usuario y modificar el entorno virtual de forma coherente y en tiempo real \cite{steuer92,milgram94}.
 
-Además de secciones tenemos subsecciones.
+Estas características hacen de la RV una herramienta poderosa en ámbitos tan diversos como la simulación de entrenamiento, la rehabilitación médica, la visualización arquitectónica o la investigación científica.
 
-\subsubsection{Subsubsecciones}
+\subsection{Componentes de un sistema de RV}
 
-Y subsecciones. 
-
-
-\section{Referencias}
-
-Las referencias se incluyen en el texto usando cite~\cite{wiki:latex}. Para citar webs, artículos o libros~\cite{koza92}, si se desean citar más de uno en el mismo lugar~\cite{bortolot2005, koza92}.
-
-
-\section{Imágenes}
-
-Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
-
-\imagen{escudoInfor}{Autómata para una expresión vacía}{.5}
-
-
-
-\section{Listas de items}
-
-Existen tres posibilidades:
-
+Un sistema de RV típico se compone de \cite{sherman2002,burdea2003}:
 \begin{itemize}
-	\item primer item.
-	\item segundo item.
+  \item \textbf{Dispositivo de visualización (Head-Mounted Display, HMD):} muestra las imágenes estereoscópicas e incorpora sensores de orientación (giroscopios, acelerómetros).
+  \item \textbf{Sistema de seguimiento (tracking):} rastrea la posición y orientación de la cabeza, manos u otros objetos mediante cámaras, emisores infrarrojos o sistemas magnéticos.
+  \item \textbf{Dispositivos de interacción:} mandos, guantes hápticos o superficies táctiles que permiten manipular objetos virtuales.
+  \item \textbf{Motor gráfico y software de simulación:} genera las escenas 3D, gestiona física, colisiones y comportamientos de los elementos del entorno.
 \end{itemize}
 
-\begin{enumerate}
-	\item primer item.
-	\item segundo item.
-\end{enumerate}
+\subsection{Taxonomía: Continuo Realidad Mixta}
 
-\begin{description}
-	\item[Primer item] más información sobre el primer item.
-	\item[Segundo item] más información sobre el segundo item.
-\end{description}
-	
+Milgram y Kishino propusieron el concepto de continuo de realidad mixta (MR), que va desde la realidad completamente física hasta la realidad completamente virtual, englobando la realidad aumentada (AR) y la realidad mixta asistida \cite{milgram94}:
 \begin{itemize}
-\item 
+  \item \textbf{Realidad Aumentada (AR):} superposición de información virtual sobre el entorno real.
+  \item \textbf{Realidad Mixta (MR):} fusión de elementos reales y virtuales que interactúan entre sí.
+  \item \textbf{Realidad Virtual (RV):} reemplazo total del entorno real por uno virtual.
 \end{itemize}
 
-\section{Tablas}
+\subsection{Modalidades de uso y aplicaciones}
 
-Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
+Según el grado de inmersión y el tipo de interacción, los sistemas de RV pueden clasificarse en:
+\begin{itemize}
+  \item \textbf{RV de escritorio:} utiliza pantallas convencionales y controladores estándar; menor inmersión, pero accesible.
+  \item \textbf{RV inmersiva:} emplea HMDs y sistemas de tracking avanzado; alta inmersión y presencia \cite{burdea2003}.
+  \item \textbf{CAVEs:} espacios cerrados con pantallas proyectadas en paredes y suelo; múltiples usuarios simultáneos.
+\end{itemize}
 
-\tablaSmall{Herramientas y tecnologías utilizadas en cada parte del proyecto}{l c c c c}{herramientasportipodeuso}
-{ \multicolumn{1}{l}{Herramientas} & App AngularJS & API REST & BD & Memoria \\}{ 
-HTML5 & X & & &\\
-CSS3 & X & & &\\
-BOOTSTRAP & X & & &\\
-JavaScript & X & & &\\
-AngularJS & X & & &\\
-Bower & X & & &\\
-PHP & & X & &\\
-Karma + Jasmine & X & & &\\
-Slim framework & & X & &\\
-Idiorm & & X & &\\
-Composer & & X & &\\
-JSON & X & X & &\\
-PhpStorm & X & X & &\\
-MySQL & & & X &\\
-PhpMyAdmin & & & X &\\
-Git + BitBucket & X & X & X & X\\
-Mik\TeX{} & & & & X\\
-\TeX{}Maker & & & & X\\
-Astah & & & & X\\
-Balsamiq Mockups & X & & &\\
-VersionOne & X & X & X & X\\
-} 
+Las aplicaciones más difundidas incluyen simuladores de vuelo y conducción, terapias de exposición en salud mental, entrenamiento quirúrgico y entornos de aprendizaje inmersivo.
+
