@@ -7,7 +7,7 @@ En esta sección se presentan algunas de las herramientas fundamentales empleada
 Unreal Engine es un motor gráfico y de desarrollo de juegos en tiempo real desarrollado por Epic Games. Su arquitectura modular y su potente editor visual permiten diseñar, iterar y desplegar entornos 3D de alta fidelidad para aplicaciones que van desde videojuegos hasta simulaciones VR y AR. Para este proyecto se ha utilizado Unreal Engine 5, aprovechando sus siguientes características principales:
 
 \begin{itemize}
-  \item \textbf{Editor de niveles y blueprints:} interfaz WYSIWYG para construir escenas y lógica de juego mediante nodos, sin necesidad de programar directamente en C++.
+  \item \textbf{Editor de niveles y blueprints:} interfaz  \textit{What You See Is What You Get} para construir escenas y lógica de juego mediante nodos, sin necesidad de programar directamente en C++.
   \item \textbf{Renderizado de última generación:} soporte para Nanite (geometría virtualizada) y Lumen (iluminación global dinámica), que permiten obtener gráficos realistas en tiempo real.
   \item \textbf{Soporte nativo de Realidad Virtual:} integración con SDKs de dispositivos HMD (Oculus, SteamVR, etc.), sistemas de tracking y controladores hápticos.
 \end{itemize}
@@ -15,25 +15,36 @@ Unreal Engine es un motor gráfico y de desarrollo de juegos en tiempo real desa
 Para la integración de la interfaz de usuario en RV se ha empleado el sistema UMG (Unreal Motion Graphics), lo que ha permitido diseñar menús y HUDs directamente dentro del entorno 3D.
 
 \subsection{Blueprints} 
-Las Blueprints constituyen el sistema de scripting visual de Unreal Engine que permite definir la lógica de juego y comportamiento de objetos sin escribir código en C++ directamente. Basado en un paradigma de programación orientada a objetos y data flow, Blueprints ofrece una interfaz de nodos conectables que representan:
+Las Blueprints constituyen el sistema de \textit{scripting} visual de Unreal Engine que permite definir la lógica de juego y comportamiento de objetos sin escribir código en C++ directamente. Basado en un paradigma de programación orientada a objetos y data flow, Blueprints ofrece una interfaz de nodos conectables que representan:
 
 \textbf{Clases y Actores:} cada Blueprint es esencialmente una subclase de \textit{UObject} o \textit{AActor}, con variables (propiedades), funciones y eventos propios.
 
-\textbf{Graph Editor:} el Event Graph agrupa nodos de eventos (p. ej., BeginPlay, Tick, entradas de usuario) con nodos de ejecución (funciones, macros, secuencias lógicas) que conectan flujos de datos y control.
+\textbf{\textit{Graph Editor:}} el Event Graph agrupa nodos de eventos (p. ej., BeginPlay, Tick, entradas de usuario) con nodos de ejecución (funciones, macros, secuencias lógicas) que conectan flujos de datos y control.
 
-\textbf{Construction Script:} un grafo especial que se ejecuta en el editor para inicializar propiedades y componentes antes del runtime.
+\textbf{\textit{Construction Script:}} un grafo especial que se ejecuta en el editor para inicializar propiedades y componentes antes del runtime.
 
-\textbf{Typed Nodes:} Blueprints maneja múltiples tipos de nodos (“Event”, “Function”, “Macro”, “Interface”, “Custom Event”), cada uno con firma de entrada/salida, lo que facilita la reutilización de lógica.
+\textbf\textit{{Typed Nodes:}} Blueprints maneja múltiples tipos de nodos (\textit{“Event”}, \textit{“Function”}, “Macro”, \textit{“Interface”}, \textit{“Custom Event”}), cada uno con firma de entrada/salida, lo que facilita la reutilización de lógica.
 
-\textbf{Compilación y VM:} al guardar un Blueprint, Unreal compila el grafo a un bytecode que corre en la Blueprint Virtual Machine, garantizando rendimiento y depuración (breakpoints, watch variables) similares a código nativo \cite{epicBlueprints}.
+\textbf{Compilación y VM:} al guardar un Blueprint, Unreal compila el grafo a un \textit{bytecode} que corre en la \textit{Blueprint Virtual Machine}, garantizando rendimiento y depuración (\textit{breakpoints}, \textit{watch variables}) similares a código nativo \cite{epicBlueprints}.
 
 \subsection{Blender}
 
 Blender es una suite de creación 3D de código abierto que incluye herramientas para modelado, escultura, texturizado y exportación de geometrías. En este proyecto, su uso se ha centrado exclusivamente en la preparación de los modelos 3D proporcionados en formato STL y su posterior exportación para Unreal Engine:
 
 \begin{itemize}
-  \item \textbf{Importación de STL:} carga de los ficheros STL originales, comprobación de integridad del modelo.
   \item \textbf{Ajuste de escala y orientación:} normalización de las dimensiones del modelo y alineación de los ejes para que coincidan con las unidades y el sistema de coordenadas de Unreal Engine.
   \item \textbf{Conversión y exportación:} exportación del modelo en formatos compatibles (FBX u OBJ), asegurando que las normales de las caras permanezcan orientadas correctamente y que no se pierda información geométrica al importar en Unreal Engine.
+
+\subsection{Dispositivos y hardware}
+
+Para la ejecución y pruebas del proyecto se ha utilizado el dispositivo de realidad virtual \textbf{Meta Quest 2}, un sistema autónomo de RV que combina alta calidad gráfica con un sistema de seguimiento preciso y facilidad de uso \cite{pimenta2022meta}.
+
+Las Meta Quest 2 permiten una experiencia inmersiva sin necesidad de conexión a un ordenador externo, lo que facilita su uso en entornos clínicos y domésticos, aportando flexibilidad y autonomía al paciente durante las sesiones de rehabilitación.
+
+El dispositivo cuenta con dos controladores inalámbricos que permiten una interacción natural mediante detección de movimientos y pulsaciones, esenciales para la manipulación de los puzles y la navegación en el entorno virtual. Además, su sistema de seguimiento \textit{inside-out} utiliza cámaras integradas para detectar la posición y orientación de la cabeza y las manos del usuario, eliminando la necesidad de estaciones base externas.
+
+Para el desarrollo y pruebas se ha empleado un ordenador personal compatible con las exigencias de Unreal Engine y la transmisión vía \textit{Link} para conectar las Meta Quest 2 al entorno de desarrollo cuando ha sido necesario.
+
+La elección de este hardware se ha basado en la disponibilidad del mismo para ser utilizado.
   
 \end{itemize}

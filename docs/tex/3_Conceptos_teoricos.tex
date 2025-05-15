@@ -1,6 +1,6 @@
 \capitulo{3}{Conceptos teóricos}
+En esta sección se presentan los fundamentos teóricos necesarios para comprender el desarrollo y la implementación del presente Trabajo de Fin de Grado. Se abordan las principales definiciones, teorías y modelos que sustentan la investigación, así como las tecnologías y herramientas empleadas. 
 \section{Realidad virtual}
-
 Se entiende por realidad virtual (RV) la tecnología que permite crear entornos digitales tridimensionales, interactivos y en tiempo real, de forma que el usuario perciba la sensación de “estar presente” en dicho entorno. Este grado de inmersión y “telepresencia” se consigue mediante la combinación de hardware (cascos HMD, sistemas de tracking, interfaces hápticas) y software (motores gráficos, algoritmos de simulación) que actualizan la escena virtual en función de los movimientos y acciones del usuario \cite{steuer92,sherman2002}.
 
 Dentro del estudio de la RV suelen distinguirse tres características fundamentales:
@@ -23,9 +23,9 @@ Un sistema de RV típico se compone de \cite{sherman2002,burdea2003}:
   \item \textbf{Motor gráfico y software de simulación:} genera las escenas 3D, gestiona física, colisiones y comportamientos de los elementos del entorno.
 \end{itemize}
 
-\subsection{Taxonomía: Continuo Realidad Mixta}
+\subsection{Taxonomía: Continuo de la virtualidad}
 
-Milgram y Kishino propusieron el concepto de continuo de realidad mixta (MR), que va desde la realidad completamente física hasta la realidad completamente virtual, englobando la realidad aumentada (AR) y la realidad mixta asistida \cite{milgram94}:
+Milgram y Kishino propusieron el concepto de continuo de la virtualidad, que va desde la realidad completamente física hasta la realidad completamente virtual, englobando la realidad aumentada (AR) y la realidad mixta asistida \cite{milgram94}:
 \begin{itemize}
   \item \textbf{Realidad Aumentada (AR):} superposición de información virtual sobre el entorno real.
   \item \textbf{Realidad Mixta (MR):} fusión de elementos reales y virtuales que interactúan entre sí.
@@ -43,3 +43,25 @@ Según el grado de inmersión y el tipo de interacción, los sistemas de RV pued
 
 Las aplicaciones más difundidas incluyen simuladores de vuelo y conducción, terapias de exposición en salud mental, entrenamiento quirúrgico y entornos de aprendizaje inmersivo.
 
+\section{Diseño de videojuegos para rehabilitación}
+
+El uso de videojuegos para la rehabilitación física se enmarca dentro del concepto de \textit{serious games}, definido como aquellos juegos cuyo principal objetivo va más allá del entretenimiento, buscando también la educación, la formación o la mejora de la salud \cite{david2016serious}.
+
+\subsection{Principios de diseño}
+
+El desarrollo de videojuegos para rehabilitación debe considerar aspectos tanto lúdicos como terapéuticos \cite{greene2016rehab}. Entre los principales principios de diseño se encuentran:
+
+\begin{itemize}
+    \item \textbf{Interactividad:} permite al usuario manipular y explorar el entorno, facilitando el aprendizaje y la mejora de habilidades motoras.
+    \item \textbf{\textit{Feedback} inmediato:} el sistema debe ofrecer respuestas instantáneas a las acciones del usuario, reforzando el progreso \cite{cameirao2010impact}.
+    \item \textbf{Dificultad progresiva:} las tareas deben adaptarse al nivel de capacidad del paciente, aumentando la complejidad de forma gradual para evitar la frustración \cite{zimmerli2012virtual}.
+    \item \textbf{Repetición y refuerzo positivo:} elementos clave en la rehabilitación física para promover la neuroplasticidad.\cite{holden2005virtual}.
+\end{itemize}
+
+\subsection{Gamificación y motivación}
+
+La gamificación introduce mecánicas de juego (puntos, logros, niveles) que aumentan la motivación y el compromiso del usuario \cite{sardi2017gamification}. En el caso del presente proyecto, la superación de puzzles y la obtención de logros sirven como incentivo para continuar con las sesiones terapéuticas.
+
+\subsection{Accesibilidad y consideraciones éticas}
+
+Los videojuegos de rehabilitación deben garantizar la accesibilidad a personas con diferentes grados de discapacidad. Además, se debe asegurar que el uso de la tecnología no sustituya la supervisión profesional, sino que actúe como complemento \cite{rodriguez2020reha}.
