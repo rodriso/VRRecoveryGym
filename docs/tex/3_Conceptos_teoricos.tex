@@ -1,21 +1,21 @@
 \capitulo{3}{Conceptos teóricos}
 En esta sección se presentan los fundamentos teóricos necesarios para comprender el desarrollo y la implementación del presente Trabajo de Fin de Grado. Se abordan las principales definiciones, teorías y modelos que sustentan la investigación, así como las tecnologías y herramientas empleadas. 
 \section{Realidad virtual}
-Se entiende por realidad virtual (RV) la tecnología que permite crear entornos digitales tridimensionales, interactivos y en tiempo real, de forma que el usuario perciba la sensación de “estar presente” en dicho entorno. Este grado de inmersión y “telepresencia” se consigue mediante la combinación de hardware (cascos HMD, sistemas de tracking, interfaces hápticas) y software (motores gráficos, algoritmos de simulación) que actualizan la escena virtual en función de los movimientos y acciones del usuario \cite{steuer92,sherman2002}.
+Se entiende por realidad virtual (RV) la tecnología que permite crear entornos digitales tridimensionales, interactivos y en tiempo real, de forma que el usuario perciba la sensación de “estar presente” en dicho entorno. Este grado de inmersión y “telepresencia” se consigue mediante la combinación de hardware (cascos HMD, sistemas de tracking, interfaces hápticas) y software (motores gráficos, algoritmos de simulación) que actualizan la escena virtual en función de los movimientos y acciones del usuario ~~\cite{steuer92,sherman2002}.
 
 Dentro del estudio de la RV suelen distinguirse tres características fundamentales:
 
-\textbf{Inmersión:} grado en que el sistema aísla y sustituye estímulos sensoriales reales por estímulos generados artificialmente, creando la impresión directa de “estar dentro” del entorno virtual \cite{milgram94}.
+\textbf{Inmersión:} grado en que el sistema aísla y sustituye estímulos sensoriales reales por estímulos generados artificialmente, creando la impresión directa de “estar dentro” del entorno virtual ~~\cite{milgram94}.
 
-\textbf{Presencia:} sensación subjetiva de “estar realmente” en el escenario virtual, más allá de la mera percepción sensorial \cite{sherman2002,slater94}.
+\textbf{Presencia:} sensación subjetiva de “estar realmente” en el escenario virtual, más allá de la mera percepción sensorial ~~\cite{sherman2002,slater94}.
 
-\textbf{Interactividad:} capacidad del sistema para registrar las acciones del usuario y modificar el entorno virtual de forma coherente y en tiempo real \cite{steuer92,milgram94}.
+\textbf{Interactividad:} capacidad del sistema para registrar las acciones del usuario y modificar el entorno virtual de forma coherente y en tiempo real ~~\cite{steuer92,milgram94}.
 
 Estas características hacen de la RV una herramienta poderosa en ámbitos tan diversos como la simulación de entrenamiento, la rehabilitación médica, la visualización arquitectónica o la investigación científica.
 
 \subsection{Componentes de un sistema de RV}
 
-Un sistema de RV típico se compone de \cite{sherman2002,burdea2003}:
+Un sistema de RV típico se compone de los siguientes elementos~\cite{sherman2002,burdea2003}:
 \begin{itemize}
   \item \textbf{Dispositivo de visualización (Head-Mounted Display, HMD):} muestra las imágenes estereoscópicas e incorpora sensores de orientación (giroscopios, acelerómetros).
   \item \textbf{Sistema de seguimiento (tracking):} rastrea la posición y orientación de la cabeza, manos u otros objetos mediante cámaras, emisores infrarrojos o sistemas magnéticos.
@@ -25,7 +25,7 @@ Un sistema de RV típico se compone de \cite{sherman2002,burdea2003}:
 
 \subsection{Taxonomía: Continuo de la virtualidad}
 
-Milgram y Kishino propusieron el concepto de continuo de la virtualidad, que va desde la realidad completamente física hasta la realidad completamente virtual, englobando la realidad aumentada (AR) y la realidad mixta asistida \cite{milgram94}:
+Milgram y Kishino propusieron el concepto de continuo de la virtualidad, que va desde la realidad completamente física hasta la realidad completamente virtual, englobando la realidad aumentada (AR) y la realidad mixta asistida ~~\cite{milgram94}:
 \begin{itemize}
   \item \textbf{Realidad Aumentada (AR):} superposición de información virtual sobre el entorno real.
   \item \textbf{Realidad Mixta (MR):} fusión de elementos reales y virtuales que interactúan entre sí.
@@ -37,7 +37,7 @@ Milgram y Kishino propusieron el concepto de continuo de la virtualidad, que va 
 Según el grado de inmersión y el tipo de interacción, los sistemas de RV pueden clasificarse en:
 \begin{itemize}
   \item \textbf{RV de escritorio:} utiliza pantallas convencionales y controladores estándar; menor inmersión, pero accesible.
-  \item \textbf{RV inmersiva:} emplea HMDs y sistemas de tracking avanzado; alta inmersión y presencia \cite{burdea2003}.
+  \item \textbf{RV inmersiva:} emplea HMDs y sistemas de tracking avanzado; alta inmersión y presencia ~~\cite{burdea2003}.
   \item \textbf{CAVEs:} espacios cerrados con pantallas proyectadas en paredes y suelo; múltiples usuarios simultáneos.
 \end{itemize}
 
@@ -45,23 +45,55 @@ Las aplicaciones más difundidas incluyen simuladores de vuelo y conducción, te
 
 \section{Diseño de videojuegos para rehabilitación}
 
-El uso de videojuegos para la rehabilitación física se enmarca dentro del concepto de \textit{serious games}, definido como aquellos juegos cuyo principal objetivo va más allá del entretenimiento, buscando también la educación, la formación o la mejora de la salud \cite{david2016serious}.
+El uso de videojuegos para la rehabilitación física se enmarca dentro del concepto de \textit{serious games}, definido como aquellos juegos cuyo principal objetivo va más allá del entretenimiento, buscando también la educación, la formación o la mejora de la salud ~~\cite{david2016serious}.
 
 \subsection{Principios de diseño}
 
-El desarrollo de videojuegos para rehabilitación debe considerar aspectos tanto lúdicos como terapéuticos \cite{greene2016rehab}. Entre los principales principios de diseño se encuentran:
+El desarrollo de videojuegos para rehabilitación debe considerar aspectos tanto lúdicos como terapéuticos ~~\cite{greene2016rehab}. Entre los principales principios de diseño se encuentran:
 
 \begin{itemize}
     \item \textbf{Interactividad:} permite al usuario manipular y explorar el entorno, facilitando el aprendizaje y la mejora de habilidades motoras.
-    \item \textbf{\textit{Feedback} inmediato:} el sistema debe ofrecer respuestas instantáneas a las acciones del usuario, reforzando el progreso \cite{cameirao2010impact}.
-    \item \textbf{Dificultad progresiva:} las tareas deben adaptarse al nivel de capacidad del paciente, aumentando la complejidad de forma gradual para evitar la frustración \cite{zimmerli2012virtual}.
-    \item \textbf{Repetición y refuerzo positivo:} elementos clave en la rehabilitación física para promover la neuroplasticidad.\cite{holden2005virtual}.
+    \item \textbf{\textit{Feedback} inmediato:} el sistema debe ofrecer respuestas instantáneas a las acciones del usuario, reforzando el progreso ~~\cite{cameirao2010impact}.
+    \item \textbf{Dificultad progresiva:} las tareas deben adaptarse al nivel de capacidad del paciente, aumentando la complejidad de forma gradual para evitar la frustración ~~\cite{zimmerli2012virtual}.
+    \item \textbf{Repetición y refuerzo positivo:} elementos clave en la rehabilitación física para promover la neuroplasticidad.~~\cite{holden2005virtual}.
 \end{itemize}
 
 \subsection{Gamificación y motivación}
 
-La gamificación introduce mecánicas de juego (puntos, logros, niveles) que aumentan la motivación y el compromiso del usuario \cite{sardi2017gamification}. En el caso del presente proyecto, la superación de puzzles y la obtención de logros sirven como incentivo para continuar con las sesiones terapéuticas.
+La gamificación introduce mecánicas de juego (puntos, logros, niveles) que aumentan la motivación y el compromiso del usuario ~~\cite{sardi2017gamification}. En el caso del presente proyecto, la superación de puzzles y la obtención de logros sirven como incentivo para continuar con las sesiones terapéuticas.
 
 \subsection{Accesibilidad y consideraciones éticas}
 
-Los videojuegos de rehabilitación deben garantizar la accesibilidad a personas con diferentes grados de discapacidad. Además, se debe asegurar que el uso de la tecnología no sustituya la supervisión profesional, sino que actúe como complemento \cite{rodriguez2020reha}.
+Los videojuegos de rehabilitación deben garantizar la accesibilidad a personas con diferentes grados de discapacidad. Además, se debe asegurar que el uso de la tecnología no sustituya la supervisión profesional, sino que actúe como complemento ~~\cite{rodriguez2020reha}.
+
+\section{Teoría del aprendizaje motor}
+
+La teoría del aprendizaje motor se basa en el modelo trifásico de Fitts y Posner \cite{fitts1967}, que describe la adquisición de habilidades motoras en tres etapas:
+
+\begin{enumerate}
+  \item \textbf{Fase cognitiva:} el aprendiz construye una representación mental de la tarea, explorando secuencias de movimiento y cometiendo errores frecuentes. La ejecución es lenta y requiere alta atención consciente \cite{schmidt2019}.
+  \item \textbf{Fase asociativa:} se establecen mapeos más precisos entre estímulos y respuestas motoras. La variabilidad de la ejecución disminuye y se corrigen errores de forma más autónoma, consolidándose patrones de movimiento \cite{schmidt2019}.
+  \item \textbf{Fase autónoma:} la habilidad está completamente automatizada; la ejecución es rápida, fluida y apenas requiere atención consciente, liberando recursos cognitivos para otras tareas \cite{fitts1967}.
+\end{enumerate}
+
+El \emph{feedback} inmediato es crítico para la consolidación de estos patrones. Winstein y Schmidt demostraron que una frecuencia reducida de conocimiento de resultados (\emph{knowledge of results}) optimiza el aprendizaje a largo plazo, evitando la dependencia excesiva de la retroalimentación externa \cite{winstein1991}. En entornos de realidad virtual, el \emph{feedback} inmediato y multimodal (visual, auditivo y háptico) permite detectar y corregir errores en tiempo real, reforzando los esquemas motores y favoreciendo la neuroplasticidad \cite{schmidt2019}. Además, la inmersión en RV incrementa la motivación y la adherencia al entrenamiento, potenciando la repetición deliberada y la automatización de la habilidad.
+
+\section{Gamificación y motivación intrínseca}
+
+La \emph{gamificación} consiste en la aplicación de elementos de diseño de juegos (p. ej., puntos, niveles, insignias, narrativa, retos) en contextos no lúdicos con el objetivo de aumentar la implicación, la motivación y la adherencia de los usuarios a una tarea \cite{deterding2011defining}. En el ámbito de la rehabilitación en RV, la gamificación permite transformar ejercicios repetitivos en experiencias más atractivas, favoreciendo la práctica continua y la mejora progresiva de las capacidades motoras y cognitivas.
+
+La \emph{motivación intrínseca} se sustenta en la Teoría de la Autodeterminación de Deci y Ryan \cite{deci1985intrinsic}, que postula tres necesidades psicológicas básicas:
+\begin{itemize}
+  \item \textbf{Autonomía:} sensación de control y elección sobre la propia conducta.
+  \item \textbf{Competencia:} percepción de eficacia y dominio en la realización de tareas.
+  \item \textbf{Relación:} conexión social y sentido de pertenencia con otros participantes o terapeutas.
+\end{itemize}
+Cuando un sistema gamificado satisface estas necesidades, la motivación intrínseca aumenta, conduciendo a una práctica más sostenida y a mejores resultados terapéuticos.
+
+Kapp \cite{kapp2012gamification} propone que la gamificación efectiva integra mecánicas (reglas del juego), dinámicas (comportamientos de los usuarios) y elementos estéticos (presentación), de modo que:
+\begin{enumerate}
+  \item \textbf{Mecánicas:} puntos, niveles, temporizadores y desafíos escalonados para construir progresión.
+  \item \textbf{Dinámicas:} recompensas variables, retroalimentación inmediata y metas claras que fomentan la repetición deliberada.
+  \item \textbf{Estética:} narrativa inmersiva y diseño coherente con la experiencia de usuario en RV.
+\end{enumerate}
+En entorno de RV, el \emph{feedback} inmediato (visual, auditivo y háptico) refuerza la sensación de competencia y contribuye a la consolidación de los aprendizajes motores y cognitivos.

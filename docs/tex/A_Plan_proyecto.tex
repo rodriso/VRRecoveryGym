@@ -1,11 +1,18 @@
 \apendice{Plan de Proyecto Software}
 
 \section{Introducción}
+El presente anexo recoge los aspectos fundamentales del plan de desarrollo seguido durante la realización del proyecto. En él se detalla la planificación temporal adoptada, basada en la metodología ágil \textit{Scrum}, así como un análisis de la viabilidad económica y legal del sistema desarrollado.
+
+La planificación con \textit{Scrum} ha permitido dividir el trabajo en iteraciones controladas, fomentar la adaptación continua a los cambios propuestos por el cliente, y mantener una visión clara del avance del proyecto a lo largo del tiempo. Se presentan los \textit{sprints} realizados, el \textit{product backlog}, y los artefactos generados durante las distintas fases de desarrollo.
+
+Por otro lado, se incluye un estudio de la viabilidad económica, donde se estiman los costes asociados al desarrollo, licencias, recursos y herramientas utilizadas. También se expone la viabilidad legal, analizando las licencias de software empleadas y definiendo un marco legal que permita el uso, distribución o ampliación futura del sistema respetando los derechos de terceros.
+
+Este anexo sirve como complemento técnico y organizativo a la memoria principal, aportando una visión estructurada de la gestión del proyecto desde una perspectiva profesional.
 
 \section{Planificación temporal}
 La planificación temporal de este proyecto, debido a que se esta siguiendo la metodologia Scrum, sera realizada mediante \textit{sprints}.
 
-\subsection{\textbf{\textit{sprint} 1: Planificación del proyecto y estructura del juego}}
+\subsection{\textbf{\textit{Sprint} 1: Planificación del proyecto y estructura del juego}}
 \begin{itemize}
 \item {Planning meeting}:
 Durante la reunión se marcaron los siguientes objetivos:
@@ -25,15 +32,15 @@ Durante la reunión se marcaron los siguientes objetivos:
 \end{enumerate}
 
     \item {Duración del sprint:}
-El \textit{sprint } se realizo entre el 12 de marzo de 2025 y el 17 de marzo de 2025, con una duración de 7 días.
+El \textit{sprint} se realizó entre el 12 de marzo de 2025 y el 17 de marzo de 2025, con una duración de 7 días.
 
-    \item {Burndown Report}
-Este \textit{sprint} se cumplió con casi todos los objetivos en el plazo determinado. La selección de las gafas de realidad virtual se veía retrasada debido a que la persona que iba a prestarlas para este proyecto no se encontraba disponible es ese momento. Cabe destacar que durante la duración de este \textit{sprint} también se realizaron tareas de aprendizaje sobre Unreal Engine ya que los conocimientos eran nulos sobre este motor gráfico. 
+    \item {Burndown Report:}
+En este \textit{sprint} se cumplió con casi todos los objetivos en el plazo determinado. La selección de las gafas de realidad virtual se veía retrasada debido a que la persona que iba a prestarlas para este proyecto no se encontraba disponible es ese momento. Cabe destacar que durante la duración de este \textit{sprint} también se realizaron tareas de aprendizaje sobre Unreal Engine ya que los conocimientos eran nulos sobre este motor gráfico. 
 
     \item {Sprint review meeting}
 Durante esta reunión, se resolvieron  dudas sobre el sistema de registro que debía tener la aplicación, como se querían estructurar las partidas y el requisito de toma de algunos datos que pedía la organización ASPAYM que eran inviables en el nivel de este proyecto. Los \textit{issues} fueron creados de forma correcta, pero se marco que había que planificar los \textit{sprints} correspondientes al proyecto.
 \end{itemize}
-\subsection{\textbf{Sprint 2: Menu principal } }
+\subsection{\textbf{Sprint 2: Menú principal } }
 \begin{itemize}
     \item {Planning meeting:}
     
@@ -49,12 +56,12 @@ Durante esta reunión, se resolvieron  dudas sobre el sistema de registro que de
     
         \item Duración del sprint:
     
-    El \textit{sprint } se realizo entre el 26 de marzo de 2025 y el 9 de abril de 2025, con una duración de 14 días.
+    El \textit{sprint } se realizó entre el 26 de marzo de 2025 y el 9 de abril de 2025, con una duración de 14 días.
     
     
         \item {Burndown Report:}
     
-    Este \textit{sprint} se cumplió con los objetivos en el plazo determinado. La estimación de tiempo fue muy extensa debido a que se utilizo este plazo para seguir adquiriendo conocimientos sobre \textit{Unreal Engine} mientras se realizaban los objetivos del sprint.
+    En este \textit{sprint} se cumplió con los objetivos en el plazo determinado. La estimación de tiempo fue muy extensa debido a que se utilizo este plazo para seguir adquiriendo conocimientos sobre \textit{Unreal Engine} mientras se realizaban los objetivos del sprint.
     
     
     
@@ -63,7 +70,7 @@ Durante esta reunión, se resolvieron  dudas sobre el sistema de registro que de
     Se habló sobre la importancia de agrupar los elementos de la interfaz en \textit{plantillas} como los botones e \textit{items} para la reusabilidad, ya que no tuve en cuenta algunos elementos por lo cual ese aspecto se planteó cambiar para el siguiente \textit{sprint}.
 \end{itemize}
 
-\subsection{\textbf{Sprint 3: Plantilla de puzle e integración de menu principal a VR } }
+\subsection{\textbf{Sprint 3: Plantilla de puzle e integración de menú principal a VR } }
 \begin{itemize}
     \item {Planning meeting:}
     
@@ -73,12 +80,12 @@ Durante la reunión se marcaron los siguientes objetivos:
     Adaptar y conectar todas las pantallas y controles del juego al entorno RV, garantizando la navegación y la interacción fluida.
 
   \item \textbf{Contador de tiempo y almacenamiento de nivel:}  
-    Implementar un temporizador que comience al iniciar el puzzle y guarde el tiempo transcurrido junto con los datos del nivel creado en la sesión.
+    Implementar un temporizador que comience al iniciar el puzle y guarde el tiempo transcurrido junto con los datos del nivel creado en la sesión.
 
   \item \textbf{Cargado de una partida:}  
     Desarrollar la funcionalidad para seleccionar y restaurar el estado de una partida previamente guardada, incluyendo el progreso y el nivel activo.
 
-  \item \textbf{Visualización de resultados del puzzle:}  
+  \item \textbf{Visualización de resultados del puzle:}  
     Mostrar al finalizar cada puzle los siguientes datos:  
     \begin{itemize}
       \item Tiempo empleado  
@@ -89,10 +96,12 @@ Durante la reunión se marcaron los siguientes objetivos:
 \end{enumerate}
     \item {Duración del \textit{sprint}}
     
-El \textit{sprint } se realizo entre el 9 de abril de 2025 y el 23 de abril de 2025, con una duración de 14 días.
+El \textit{sprint } se realizó entre el 9 de abril de 2025 y el 23 de abril de 2025, con una duración de 14 días.
     \item {Burndown Report}
     
-Este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. La estimación de tiempo puede que fuera la correcta pero la falta del\textit{hardware} retrasa las pruebas del software debido a no tener acceso a unas gafas de realidad virtual por la festividad de semana santa.Se focalizo más en la parte de documentación del proyecto.
+En este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. La estimación de tiempo puede que fuera la correcta pero la falta del\textit{hardware} retrasa las pruebas del software debido a no tener acceso a unas gafas de realidad virtual por la festividad de semana santa.Se focalizo más en la parte de documentación del proyecto.
+
+\end{itemize}
 
 \subsection{\textbf{Sprint 4: Palacio de Shahriar: Preparación e importación inicial } }
 \begin{itemize}
@@ -100,7 +109,7 @@ Este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. L
     
 Durante la reunión se marcaron los siguientes objetivos:
 \begin{enumerate}
-  \item \textbf{Importación de modelos STL:} Importación de todos los modelos 3D del puzzle, con su correcta escala y colisiones. 
+  \item \textbf{Importación de modelos STL:} Importación de todos los modelos 3D del puzle, con su correcta escala y colisiones. 
 
   \item \textbf{Arreglar el menú de pausa:} Reestructuración del menú de pausa, debido a que era poco practica la implementación realizada.  
 
@@ -111,15 +120,214 @@ Durante la reunión se marcaron los siguientes objetivos:
 \end{enumerate}
     \item {Duración del \textit{sprint}:}
     
-El \textit{sprint} se realizo entre el 23 de abril de 2025 y el 7 de mayo de 2025, con una duración de 14 días.
+El \textit{sprint} se realizó entre el 23 de abril de 2025 y el 7 de mayo de 2025, con una duración de 14 días.
     \item {Burndown Report}
     
-Este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. La estimación de tiempo puede que fuera la correcta de nuevo, pero una vez más la falta del \textit{hardware} retrasa las pruebas del software debido a no tener acceso a unas gafas de realidad virtual por compatibilidad de horarios con los prestantes de las gafas de RV. Debido a que comencé las practicas y el horario establecido para que pudiese utilizar las gafas fue muy reducido, tome la decisión de pedirlas prestadas a un amigo para tener total disponibilidad de ellas y que el proyecto no se viese más atrasado por falta de material para las pruebas del código.  
-\end{itemize}
-\section{Estudio de viabilidad}
+En este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. La estimación de tiempo puede que fuera la correcta de nuevo, pero una vez más la falta del \textit{hardware} retrasa las pruebas del software debido a no tener acceso a unas gafas de realidad virtual por compatibilidad de horarios con los prestantes de las gafas de RV. Debido a que comencé las practicas y el horario establecido para que pudiese utilizar las gafas fue muy reducido, tome la decisión de pedirlas prestadas a un amigo para tener total disponibilidad de ellas y que el proyecto no se viese más atrasado por falta de material para las pruebas del código. 
 
+\end{itemize}
+
+\subsection{\textbf{\textit{Sprint} 5: Palacio de Shahriar: Interacciones avanzadas }}
+\begin{itemize}
+\item {Planning meeting}:
+Durante la reunión se marcaron los siguientes objetivos:
+
+\begin{enumerate}
+\item \textbf{Implementación del sistema de apertura de caja con \textit{Palace\_Box\_Key}:}  
+  Diseñar e integrar la lógica necesaria para permitir la apertura de la caja mediante la llave correspondiente, incluyendo detección de colisiones y validación de acceso.
+
+\item \textbf{Mecánica de caña de pescar con efecto magnético:}  
+  Desarrollar la funcionalidad de la caña con capacidad de atracción magnética, capaz de detectar objetos a distancias de 300, 60 y 5 unidades, con ajustes de precisión y respuesta visual.
+
+\item \textbf{Animación y lógica de apertura de la caja:}  
+  Crear la animación correspondiente a la apertura de la caja y programar la lógica asociada para que se ejecute correctamente tras el uso de la llave o resolución del candado.
+
+\item \textbf{Implementación del candado direccional:}  
+  Diseñar la secuencia de entrada direccional (ej. abajo, izquierda...) y su lógica de validación para desbloquear el acceso a la caja, con retroalimentación visual y sonora.
+
+\item \textbf{Obtención de la lámpara mágica:}  
+  Integrar el objeto "lámpara mágica" como recompensa al completar correctamente el puzle de la caja, incluyendo animación y lógica de recogida del objeto.
+\end{enumerate}
+
+    \item {Duración del sprint:}
+El \textit{sprint } se realizó entre el 7 de mayo de 2025 y el 21 de mayo de 2025, con una duración de 14 días.
+
+    \item {Burndown Report}
+En este \textit{sprint} se cumplió con casi todos los objetivos en el plazo determinado. La implementación de modelos como la caña de pescar, la caja y los candados no habian sido proporcionados, y el atraso de anteriores \textit{sprints}, influenciaron en que este \textit{sprint} se viese atrasado ligeramente.
+
+\item {Sprint review meeting}
+Lo más destacable de esta reunión fue profundizar en la facilidad del puzle, focalizando sobre todo en la parte de los \textit{stickmans} para buscar una manera de que el usuario sepa identificar en que posición se deben de poner. Se opto por dejar la parte de la cabeza inmóvil. 
+
+\subsection{\textbf{\textit{Sprint} 6: Palacio de Shahriar: Exportación de datos a CSV y pruebas }}
+\begin{itemize}
+\item {Planning meeting}:
+Durante la reunión se marcaron los siguientes objetivos:
+
+\begin{enumerate}
+  \item \textbf{Exportación de métricas de rendimiento e interacción:}  
+    Definir e implementar la función que registre y exporte diversas métricas del puzle —tiempos de completado de cada paso, número de intentos por paso y cualquier otro dato relevante— generando un CSV con columnas para:
+    \begin{itemize}
+      \item Identificación del paso
+      \item Timestamp de inicio y fin
+      \item Duración total
+      \item Número de intentos
+      %%RELLENAR CUANDO SE TERMINE
+    \end{itemize}
+
+  \item \textbf{Registro de movilidad del personaje:}  
+    Diseñar un sistema de teletransporte que cambie la posición del personaje a lo largo del puzle para mejorar la accesibilidad.
+
+  \item \textbf{Pruebas funcionales de exportación:}  
+    Elaborar y ejecutar casos de prueba que verifiquen la correcta generación del CSV en distintos escenarios (puzle completado, interrumpido, reiniciado), validando integridad y consistencia de datos.
+    
+   \item \textbf{Añadir elementos visuales:}
+   Añadir imágenes y elementos que ayuden al usuario a realizar el puzle como controles del mando y pistas.
+   
+\end{enumerate}
+
+    \item {Duración del sprint:}
+El \textit{sprint } se realizó entre el 21 de mayo de 2025 y el 11 de junio de 2025, con una duración de 21 días.
+
+    \item {Burndown Report}
+En este \textit{sprint} se cumplió con todos los objetivos en el plazo determinado.
+
+    \item {Sprint review meeting}
+
+\end{itemize}
+
+\section{Estudio de viabilidad}
+La viabilidad del proyecto hace referencia a su capacidad para ser desarrollado con éxito, cumpliendo los objetivos propuestos dentro de las limitaciones técnicas, temporales y de recursos. Para determinar si es un proyecto factible, se llevará a cabo un análisis que aborde distintos aspectos clave como la viabilidad económica.
 \subsection{Viabilidad económica}
+El proyecto se ha planteado teniendo en cuenta la optimización de los recursos disponibles, minimizando los costes mediante el uso de herramientas y equipamiento accesibles. A continuación, se detalla el análisis económico del proyecto, considerando tanto los recursos materiales como humanos.
+
+\subsubsection*{Recursos de hardware}
+\begin{itemize}
+  \item \textbf{Meta Quest 2}: El visor de realidad virtual empleado es de propiedad personal, por lo que no supone un coste adicional. En caso de requerir una estimación, su precio aproximado ronda los \textbf{350~€}.
+
+  \item \textbf{Ordenador de desarrollo}: Se utiliza un equipo personal con capacidad suficiente para ejecutar Unreal Engine, sin necesidad de adquirir nuevo hardware. Valor estimado: \textbf{1.300~€}.
+\end{itemize}
+
+\subsubsection*{Recursos de software}
+\begin{itemize}
+  \item \textbf{Unreal Engine 5}: Motor de desarrollo utilizado para la creación del entorno virtual. Se trata de una herramienta gratuita para uso académico y desarrollo de proyectos no comerciales.
+
+  \item \textbf{GitLab}: Se emplea como sistema de control de versiones y gestión de código. La cuenta utilizada es gratuita pero el repositorio se sitúa en un repositorio empresarial.
+
+  \item \textbf{Herramientas auxiliares}: Como Visual Studio (versión Community gratuita) y Blender.
+\end{itemize}
+
+\subsubsection*{Costes de personal (estimación teórica)}
+Aunque el desarrollo del proyecto no conlleva gastos reales en personal, se realiza una estimación teórica para valorar el coste equivalente en un entorno profesional:
+
+\begin{itemize}
+  \item \textbf{Desarrollador}: Se estima una dedicación total de 300 horas. Considerando una tarifa media de 20~€/hora para un perfil junior, el coste estimado sería de \textbf{6.000~€}.
+
+  \item \textbf{Supervisión de tutores}: Se realizaron un total de 8 reuniones de aproximadamente 40 minutos con 3 tutores. Esto supone un total de 16 horas de dedicación conjunta. Asumiendo un coste medio de 35~€/hora por tutor, el coste estimado de supervisión es de \textbf{1.680~€} (16 h × 35~€/h × 3 tutores).
+\end{itemize}
+
+
+\begin{table}[p]
+  \centering
+  {\small 
+  \begin{tabularx}{\linewidth}{
+    @{} >{\bfseries\arraybackslash}X
+    >{\raggedleft\arraybackslash}r
+    >{\raggedleft\arraybackslash}r
+    @{}}
+    \toprule
+    Concepto & Cantidad / Duración & Coste estimado (€) \\
+    \midrule
+    \multicolumn{3}{l}{\textbf{Hardware}} \\
+    Meta Quest 2 & 1 unidad & 350,00 \\
+    Ordenador de desarrollo (uso general) & 1 unidad & 1 000,00 \\
+    \midrule
+    \multicolumn{3}{l}{\textbf{Software}} \\
+    Unreal Engine 5 & Gratuito & 0,00 \\
+    GitLab (suscripción empresarial) & 4 meses & 72,00 \\
+    Herramientas auxiliares (VS, Blender…) & Gratuito & 0,00 \\
+    \midrule
+    \multicolumn{3}{l}{\textbf{Coste de personal (estimación)}} \\
+    Desarrollador (300 h × 20 €/h) & 300 horas & 6 000,00 \\
+    Supervisión (3 tutores × 16 h × 35 €/h) & 48 horas & 1 680,00 \\
+    \midrule
+    \textbf{Total estimado} & & \textbf{9 102,00 €} \\
+    \bottomrule
+  \end{tabularx}
+  }
+  \caption[Costes del proyecto]{Resumen de costes estimados del proyecto.}
+  \label{tab:costes-generales}
+\end{table}
+
+
+
+\subsection*{Beneficios}
+
+El desarrollo del proyecto no persigue ningún fin comercial ni beneficio económico directo. Se trata de un proyecto académico realizado en el marco del Trabajo de Fin de Grado, orientado a la mejora de la rehabilitación motriz de personas con discapacidad en las extremidades superiores.
+
+El objetivo principal es contribuir con una solución accesible y funcional que pueda ser utilizada, evaluada o adaptada por entidades sin ánimo de lucro como la fundación ASPAYM. La motivación del proyecto es principalmente social, centrada en aportar valor a través de la tecnología, sin que ello suponga una explotación económica del producto desarrollado.
+
+Por tanto, los beneficios derivados del proyecto son de carácter formativo, social y tecnológico, no existiendo intenciones de monetización ni comercialización del software.
+
 
 \subsection{Viabilidad legal}
+La viabilidad legal de un proyecto software consiste en evaluar todos los aspectos jurídicos vinculados con el desarrollo y la distribución del producto. En este caso, se consideran:
+
+\subsubsection{Licencias de \textit{software}}
+
+Una licencia de \textit{software} es un acuerdo legal entre el titular de los derechos de autor y el usuario final, en el que se establecen los términos bajo los cuales se permite el uso del producto~~\cite{licenciaQueEs}.
+
+El desarrollo del proyecto ha empleado herramientas y recursos cuya licencia es de carácter abierto o gratuito, y compatible con el uso académico. Las principales herramientas empleadas son:
+
+\begin{itemize}
+  \item \textbf{Unreal Engine 5}: Licencia de uso gratuita para fines educativos, con posibilidad de publicación sin coste mientras no se superen los umbrales de ingresos establecidos por Epic Games~~\cite{unrealLicense}.
+  \item \textbf{Visual Studio Community}: Licencia gratuita para estudiantes, proyectos personales y académicos~~\cite{vslicense}.
+  \item \textbf{Blender}: Licenciado bajo GNU GPLv2+, permite libre uso, distribución y modificación~~\cite{blenderlicense}.
+  \item \textbf{GitLab}: Licenciado bajo MIT.
+\end{itemize}
+
+Dado que el desarrollo se ha realizado en un entorno académico, y no se contempla su distribución comercial, el cumplimiento legal respecto a las licencias se mantiene dentro de los márgenes establecidos por los proveedores de las herramientas utilizadas.
+
+\subsubsection{Licencias de imágenes y contenido gráfico}
+
+Para el diseño de interfaces o materiales visuales incluidos en el entorno de realidad virtual, se han empleado únicamente recursos libres de derechos o generados específicamente para este proyecto. 
+
+Todas las fuentes de iconos o modelos utilizados se han documentado debidamente en el repositorio del proyecto, siguiendo los términos de uso de cada proveedor.
+
+\subsubsection{Licencia del proyecto desarrollado}
+
+El software desarrollado será distribuido bajo una licencia libre. En este caso, se ha optado por aplicar la licencia \textbf{GNU GPLv3}, ya que garantiza que cualquier adaptación o distribución futura del software mantenga las mismas condiciones de libertad y apertura que el original. Esta decisión se alinea con el carácter académico, social y sin ánimo de lucro del proyecto.
+
+\subsubsection{Licencia de la documentación}
+
+La documentación generada para el proyecto será publicada bajo la licencia \textbf{Creative Commons CC BY-NC-ND 4.0}, lo que permite su libre distribución siempre que se mencione la autoría, no se utilice con fines comerciales y no se generen obras derivadas ~\cite{cclicenses}.
+
+\subsubsection{Cumplimiento de normativa de protección de datos}
+
+El proyecto no trata datos personales reales, ya que la aplicación está diseñada para no recoger ningún tipo de dato personal, tan solo datos sobre el progreso realizado en los puzles. Por tanto, no aplica el RGPD ni la LOPDGDD en este contexto.
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.50\columnwidth} p{0.50\columnwidth} }
+		\toprule
+		\textbf{Recurso} & \textbf{Licencia} \\
+		\toprule
+		\textbf{Modelos ASPAYM} & 
+			CC BY-NC-SA 4.0 \\
+		\addlinespace
+		\textbf{Código propio (GitLab)} &
+			MIT License \\
+		\addlinespace
+		\textbf{Unreal Engine} &
+			EULA \\
+		\addlinespace
+		\textbf{Blender} &
+			GNU GPL v2 o superior \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Licencias de dependencias y recursos del proyecto}
+	\label{tab:licencias-dependencias}
+\end{table}
+
+
 
 

@@ -1,7 +1,8 @@
 \capitulo{4}{Técnicas y herramientas}
 
-En esta sección se presentan algunas de las herramientas fundamentales empleadas en el desarrollo del proyecto.
+En esta sección se presentan las tecnicas y herramientas fundamentales empleadas en el desarrollo del proyecto.
 \section{Herramientas}
+A continuación, se presentan las herramientas empleadas durante el desarrollo del proyecto, 
 \subsection{Unreal Engine}
 
 Unreal Engine es un motor gráfico y de desarrollo de juegos en tiempo real desarrollado por Epic Games. Su arquitectura modular y su potente editor visual permiten diseñar, iterar y desplegar entornos 3D de alta fidelidad para aplicaciones que van desde videojuegos hasta simulaciones VR y AR. Para este proyecto se ha utilizado Unreal Engine 5, aprovechando sus siguientes características principales:
@@ -25,7 +26,7 @@ Las Blueprints constituyen el sistema de \textit{scripting} visual de Unreal Eng
 
 \textbf\textit{{Typed Nodes:}} Blueprints maneja múltiples tipos de nodos (\textit{“Event”}, \textit{“Function”}, “Macro”, \textit{“Interface”}, \textit{“Custom Event”}), cada uno con firma de entrada/salida, lo que facilita la reutilización de lógica.
 
-\textbf{Compilación y VM:} al guardar un Blueprint, Unreal compila el grafo a un \textit{bytecode} que corre en la \textit{Blueprint Virtual Machine}, garantizando rendimiento y depuración (\textit{breakpoints}, \textit{watch variables}) similares a código nativo \cite{epicBlueprints}.
+\textbf{Compilación y VM:} al guardar un Blueprint, Unreal compila el grafo a un \textit{bytecode} que corre en la \textit{Blueprint Virtual Machine}, garantizando rendimiento y depuración (\textit{breakpoints}, \textit{watch variables}) similares a código nativo ~~~\cite.{epicBlueprints}.
 
 \subsection{Blender}
 
@@ -37,14 +38,14 @@ Blender es una suite de creación 3D de código abierto que incluye herramientas
 
 \subsection{Dispositivos y hardware}
 
-Para la ejecución y pruebas del proyecto se ha utilizado el dispositivo de realidad virtual \textbf{Meta Quest 2}, un sistema autónomo de RV que combina alta calidad gráfica con un sistema de seguimiento preciso y facilidad de uso \cite{pimenta2022meta}.
+Para la ejecución y pruebas del proyecto se ha utilizado el dispositivo de realidad virtual \textbf{Meta Quest 2}, un sistema autónomo de RV que combina alta calidad gráfica con un sistema de seguimiento preciso y facilidad de uso.
 
-Las Meta Quest 2 permiten una experiencia inmersiva sin necesidad de conexión a un ordenador externo, lo que facilita su uso en entornos clínicos y domésticos, aportando flexibilidad y autonomía al paciente durante las sesiones de rehabilitación.
+Las Meta Quest 2 permiten una experiencia inmersiva sin necesidad de conexión a un ordenador externo, lo que facilita su uso en entornos clínicos y domésticos, aportando flexibilidad y autonomía al paciente durante las sesiones de rehabilitación. 
 
 El dispositivo cuenta con dos controladores inalámbricos que permiten una interacción natural mediante detección de movimientos y pulsaciones, esenciales para la manipulación de los puzles y la navegación en el entorno virtual. Además, su sistema de seguimiento \textit{inside-out} utiliza cámaras integradas para detectar la posición y orientación de la cabeza y las manos del usuario, eliminando la necesidad de estaciones base externas.
 
 Para el desarrollo y pruebas se ha empleado un ordenador personal compatible con las exigencias de Unreal Engine y la transmisión vía \textit{Link} para conectar las Meta Quest 2 al entorno de desarrollo cuando ha sido necesario.
 
-La elección de este hardware se ha basado en la disponibilidad del mismo para ser utilizado.
+La elección de este \textit{hardware} se ha basado en la disponibilidad del mismo para ser utilizado.
   
 \end{itemize}
