@@ -53,10 +53,6 @@
 		"Switch",
 		"XboxOne",
 		"XSX",
-		"Mac",
-		"VisionOS",
-		"Linux",
-		"Android",
-		"IOS"
+		"VisionOS"
 	]
 }
