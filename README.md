@@ -11,6 +11,7 @@ Its goal is to provide an accessible, motivating, and customizable rehabilitatio
 
 ## Docs
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 Official documents on  [documentation](https://gitlab.com/HP-SCDS/Observatorio/2024-2025/vrrecoverygym/ubu-vrrecoverygym/-/blob/492360ac836652dce161cca4c3c4c6dbb06821ae/docs/memoria.pdf) and [anexes](https://gitlab.com/HP-SCDS/Observatorio/2024-2025/vrrecoverygym/ubu-vrrecoverygym/-/blob/492360ac836652dce161cca4c3c4c6dbb06821ae/docs/anexos.pdf)
 ## Contact
 
