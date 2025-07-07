@@ -1,4 +1,6 @@
-![Logo](logo_icon.png)
+<p align="center">
+  <img src="logo_icon.png" alt="Logo" width="200" />
+</p>
 # UBU-VRRecoveryGym
 
 **VRRecoveryGym** is a virtual reality application developed using Unreal Engine and C++ for motor rehabilitation.  
