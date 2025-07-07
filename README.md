@@ -1,3 +1,4 @@
+![Logo](logo_icon.png)
 # UBU-VRRecoveryGym
 
 **VRRecoveryGym** is a virtual reality application developed using Unreal Engine and C++ for motor rehabilitation.  
