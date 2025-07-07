@@ -1,9 +1,51 @@
 \capitulo{5}{Aspectos relevantes del desarrollo del proyecto}
+Durante el desarrollo del proyecto se han enfrentado diversos retos técnicos, metodológicos y humanos que han condicionado e impulsado la evolución del sistema. Este capítulo recoge los elementos más destacados del proceso, presentados a continuación.
 
-Uno de los aspectos más significativos de este proyecto ha sido la oportunidad de trabajar en un entorno real con un cliente externo. En este caso, el cliente fue el responsable de la asociación ASPAYM, quien participó activamente en las reuniones de seguimiento del proyecto. Su implicación permitió establecer una comunicación directa y constante, aportando ideas, validando propuestas y sugiriendo modificaciones en función de las necesidades reales del colectivo al que va dirigido el sistema. Esta experiencia ha sido especialmente enriquecedora, ya que ha permitido integrar la perspectiva del usuario final en todas las fases del desarrollo, adaptando el enfoque inicial a una solución verdaderamente útil y accesible.
+\section{Colaboración con un cliente en un proyecto real}
 
-Otro punto destacable ha sido el proceso de aprendizaje en torno al desarrollo de aplicaciones en \textit{realidad virtual}, un campo completamente nuevo al inicio del trabajo. El uso de \textit{Unreal Engine}, junto con el desarrollo para dispositivos \textit{Meta Quest}, ha supuesto un reto técnico importante que ha requerido una formación autodidacta intensiva. A lo largo del proyecto, se ha adquirido experiencia en el diseño de entornos virtuales inmersivos, implementación de mecánicas interactivas y gestión de la lógica del juego en un entorno 3D, aplicando tanto programación en \textit{Blueprints} como nociones básicas de \textit{C++}.
+Uno de los aspectos más significativos del presente proyecto ha sido la oportunidad de colaborar con un cliente externo real. En este caso, se trató de la asociación ASPAYM, cuyo responsable participó activamente en las reuniones de seguimiento. Esta colaboración permitió establecer una comunicación directa y continua, que fue clave para orientar el desarrollo del sistema hacia una solución alineada con las necesidades del colectivo al que va dirigido.
 
-Además, el uso de recursos 3D ha sido fundamental para el diseño de los puzles interactivos del sistema. Se han integrado modelos tridimensionales que no solo cumplen una función estética si no que ha requerido un trabajo minucioso de adaptación, configuración de colisiones y ajuste de físicas para garantizar una experiencia fluida, funcional y segura para el usuario.
+La implicación del cliente se tradujo en una serie de aportaciones valiosas, tanto a nivel conceptual como funcional. Durante el transcurso del proyecto, se presentaron propuestas preliminares que fueron debatidas en conjunto, recibiendo sugerencias, observaciones y validaciones por parte de la asociación y tutores. Esta dinámica de trabajo contribuyó a mejorar iterativamente el diseño del sistema, garantizando que cada funcionalidad implementada respondiera a un criterio de utilidad real.
 
-Por ultimo, resulta crucial haber identificado desde el inicio las particularidades de los usuarios finales, muchos de los cuales presentan limitaciones motrices derivadas de su condición. Diseñar la jugabilidad pensando en ellas implicó adoptar mecánicas que reduzcan la necesidad de movimientos precisos y de alta velocidad, así como ofrecer múltiples modalidades de interacción—ya sea mediante gestos amplios y simplificados, menús accesibles o ayudas visuales y sonoras que guíen al jugador. Este enfoque centrado en la accesibilidad no solo mejora la experiencia de quienes tienen dificultades físicas, sino que también enriquece el sistema general al fomentar una interfaz intuitiva y adaptable, capaz de ajustarse a distintos niveles de destreza y garantizar una participación inclusiva y satisfactoria.
+\subsection{Metodología de trabajo}
+
+Aunque no se realizó una prueba directa con usuarios finales, la visión experta del cliente aportó un conocimiento profundo de las barreras cotidianas que enfrentan los usuarios finales, lo cual fue determinante para orientar ciertas decisiones técnicas, como la configuración de los controles o la usabilidad.
+
+Asimismo, la utilización de un marco de trabajo basado en \textit{SCRUM} facilitó la adaptación continua a los cambios y sugerencias planteadas durante las reuniones. La división del trabajo en \textit{sprints} y la planificación de entregas incrementales promovieron un entorno de desarrollo dinámico, flexible y centrado en resultados funcionales.
+
+\section {Desarrollo en entorno tridimensional}
+
+Otro punto destacable ha sido el proceso de aprendizaje en torno al desarrollo de aplicaciones en realidad virtual, un campo completamente nuevo al inicio del trabajo. Desde el primer momento, enfrentarse al desarrollo 3D supuso un reto conceptual importante. Comprender cómo funciona un entorno tridimensional implicó familiarizarse con nociones fundamentales como los sistemas de coordenadas, la orientación de los ejes (\textit{X}, \textit{Y}, \textit{Z}), las posiciones relativas entre objetos, y especialmente la rotación de modelos, que no siempre es intuitiva debido a conceptos como el \textit{gimbal lock} o el uso de \textit{cuaterniones} en segundo plano explicados en los conceptos teóricos.
+
+Uno de los mayores desafíos iniciales fue entender cómo calcular correctamente desplazamientos, trayectorias y movimientos dentro del espacio 3D, teniendo en cuenta tanto la posición absoluta como la local de los objetos, y cómo estas se ven afectadas por la jerarquía de actores o el uso de componentes. Adaptarse a este paradigma espacial llevó tiempo, especialmente al trabajar con interacciones físicas y colisiones dentro del entorno virtual.
+
+\section{Aprendizaje del motor \textit{Unreal Engine}}
+
+Además, el modelo de desarrollo propuesto por \textit{Unreal Engine} supuso una curva de aprendizaje pronunciada. Su sistema basado en \textit{Levels}, \textit{Blueprints}, \textit{Actors} e \textit{Interfaces} 3D resultó inicialmente complejo de asimilar, especialmente por la forma tan modular y a la vez interconectada en la que se organiza el proyecto. Por ejemplo, entender cuándo crear un \textit{Blueprint} a nivel de actor, cuándo utilizar un \textit{GameMode}, o cómo comunicar eventos entre componentes mediante \textit{Interfaces} o \textit{Event Dispatchers}, supuso un ejercicio continuo de pruebas hasta conseguir el resultado deseado.
+
+Todo este proceso requirió una formación autodidacta intensiva, apoyada en documentación oficial, foros, vídeos y la experimentación directa. A lo largo del proyecto se fue adquiriendo experiencia en el diseño de entornos virtuales inmersivos, en la implementación de mecánicas interactivas adaptadas a las capacidades del dispositivo \textit{Meta Quest}, y en la gestión de la lógica del juego tanto en entornos \textit{VR} como en el plano técnico de programación. Esto incluyó tanto el uso extensivo de \textit{Blueprints} como la integración puntual de código en \textit{C++} para extender la funcionalidad del motor donde fue necesario.
+
+\section{Implementación de modelos 3D}
+
+El uso de recursos tridimensionales ha sido un componente clave en el desarrollo de los puzles interactivos del sistema. Estos modelos no solo tienen una función estética, sino que también están intrínsecamente ligados a la lógica del juego, a través de sus propiedades físicas, su interacción con el entorno y su respuesta a los movimientos del usuario.
+
+Cabe destacar que, al inicio del proyecto, no se contaban con conocimientos previos sobre modelado 3D ni sobre herramientas de edición como \textit{Blender}. Esto implicó un proceso de aprendizaje intensivo para adquirir los fundamentos necesarios sobre manipulación de geometría en un espacio tridimensional. 
+
+El uso de \textit{Blender} permitió realizar tareas fundamentales como:
+
+\begin{itemize}
+    \item \textbf{Ajuste de escala y orientación:} fue necesario comprender cómo funcionan los sistemas de coordenadas en 3D, y cómo se relacionan con la escala y la rotación de los objetos. Especialmente importante fue aprender a posicionar correctamente el \textit{pivote} o centro de transformación de cada modelo, ya que este punto determina el eje de rotación y desplazamiento dentro de \textit{Unreal Engine}.
+    
+    \item \textbf{Texturizado básico:} aunque el enfoque principal del proyecto no era artístico, se trabajó también en la aplicación de imágenes y colores simples a los modelos para mejorar la identificación de piezas durante los ejercicios. Esto implicó la asignación de materiales y la comprensión básica del sistema de \textit{UV Mapping}, que permite proyectar una imagen sobre la superficie del modelo.
+    
+    \item \textbf{Exportación adecuada:} finalmente, los modelos fueron exportados en formatos compatibles con \textit{Unreal Engine}, como \texttt{.FBX} o \texttt{.OBJ}, asegurando que se mantuvieran las transformaciones aplicadas, el centro de masas y las normales orientadas correctamente.
+    
+\end{itemize}
+
+El proceso de aprendizaje fue eminentemente práctico y se apoyó en recursos como documentación oficial, tutoriales en vídeo, foros y pruebas de ensayo-error. Gracias a ello, se logró integrar los modelos en el motor con la configuración adecuada de físicas, colisiones y puntos de anclaje, lo cual fue crucial para garantizar una experiencia fluida, funcional y segura dentro del entorno virtual.
+
+\section{Diseño accesible para usuarios con discapacidad}
+
+Por último, resulta crucial haber identificado desde el inicio las particularidades de los usuarios finales, muchos de los cuales presentan limitaciones motrices derivadas de su condición. Diseñar la jugabilidad pensando en ellas implicó adoptar mecánicas que reduzcan la necesidad de movimientos precisos y de alta velocidad, así como ofrecer múltiples modalidades de interacción—ya sea mediante gestos amplios y simplificados, menús accesibles o ayudas visuales y sonoras que guíen al jugador.
+
+Este enfoque centrado en la accesibilidad no solo mejora la experiencia de quienes tienen dificultades físicas, sino que también enriquece el sistema general al fomentar una interfaz intuitiva y adaptable, capaz de ajustarse a distintos niveles de destreza y garantizar una participación inclusiva y satisfactoria.

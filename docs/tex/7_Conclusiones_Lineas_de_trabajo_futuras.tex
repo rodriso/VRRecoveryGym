@@ -1,4 +1,79 @@
 \capitulo{7}{Conclusiones y Líneas de trabajo futuras}
 
-Todo proyecto debe incluir las conclusiones que se derivan de su desarrollo. Éstas pueden ser de diferente índole, dependiendo de la tipología del proyecto, pero normalmente van a estar presentes un conjunto de conclusiones relacionadas con los resultados del proyecto y un conjunto de conclusiones técnicas. 
-Además, resulta muy útil realizar un informe crítico indicando cómo se puede mejorar el proyecto, o cómo se puede continuar trabajando en la línea del proyecto realizado. 
+En este último apartado de la memoria se pretende exponer todo lo aprendido durante la realización del proyecto y mostrar ideas sobre mejoras para el presente proyecto.
+
+\section{Conclusiones}
+
+Debido a la diversidad de aprendizajes adquiridos durante el desarrollo del presente Trabajo de Fin de Grado, se ha optado por estructurar las conclusiones en tres bloques diferenciados: \textbf{conclusiones científicas}, relacionadas con los principios de rehabilitación y experiencia de usuario; \textbf{conclusiones técnicas}, centradas en el desarrollo del entorno VR; y \textbf{conclusiones personales}, vinculadas al crecimiento profesional y académico del desarrollador.
+
+\subsection*{Conclusiones científicas}
+
+El desarrollo del entorno virtual de rehabilitación ha permitido profundizar en el impacto de la retroalimentación inmediata, la repetición y la interacción activa como elementos clave en el aprendizaje motor. Se ha confirmado que el diseño de ejercicios que exigen movimientos precisos y guiados favorece la consolidación de patrones motores, tal como apuntan estudios previos en neurorehabilitación.
+
+Además, se ha evidenciado la necesidad de adaptar los entornos virtuales a las capacidades físicas y cognitivas del usuario final. El diseño debe contemplar tanto la accesibilidad como la variabilidad del ritmo de rehabilitación de cada paciente. Esto se traduce, por ejemplo, en la necesidad de permitir ajustes de dificultad o controlar el tiempo de sesión.
+
+Finalmente, la experiencia con usuarios reales, aunque limitada, ha servido para validar la utilidad de la realidad virtual como herramienta de apoyo en terapias convencionales, destacando especialmente su potencial motivacional.
+
+\subsection*{Conclusiones técnicas}
+
+
+Desde el punto de vista técnico, uno de los aprendizajes más significativos ha sido el dominio progresivo del motor \textit{Unreal Engine 5.5}, junto con sus herramientas asociadas como \textit{Blueprints} y el soporte parcial en \textit{C++}. La utilización de la plantilla base para realidad virtual proporcionó una estructura inicial robusta, aunque fue necesario realizar múltiples adaptaciones para responder a los requerimientos específicos del proyecto.
+
+Uno de los principales desafíos fue la creación de un sistema de guardado personalizado capaz de almacenar datos relevantes sobre el rendimiento del usuario. Asimismo, se implementó un mecanismo de exportación de datos en formato \textit{CSV}, utilizando nodos extendidos a través del \textit{Victory Plugin}, lo cual requirió una comprensión profunda del flujo de datos dentro del entorno VR.
+
+También se abordó la configuración dinámica de niveles en función del tipo de ejercicio, lo que implicó una gestión precisa de variables globales, sistemas de navegación y condiciones de activación. La correcta orquestación de los eventos de realidad virtual y la comunicación entre actores mediante \textit{Blueprint Interfaces} y eventos personalizados ha resultado esencial para mantener la coherencia del entorno y garantizar una experiencia fluida.
+
+Por otro lado, se prestó especial atención a la construcción de interfaces accesibles, al tratamiento del input procedente de controladores hápticos, y a la optimización del rendimiento para mantener una tasa de refresco estable en el visor. Todos estos aspectos han contribuido al fortalecimiento del conocimiento sobre la arquitectura de \textit{Unreal Engine}, el ciclo de vida de sus componentes y su modelo de ejecución en tiempo real.
+
+
+\subsection*{Conclusiones personales}
+
+A nivel personal, este proyecto ha supuesto un reto en todas sus fases, que ha exigido aprender y aplicar conocimientos de programación, diseño de \textit{UX/UI}, metodologías ágiles y documentación técnica. Destacar además de que no se tenia ningún conocimiento sobre el diseño de un videojuego en realidad virtual, esto ha supuesto muchas horas de aprendizaje autodidacta y lectura de documentación.
+
+Se ha aprendido a priorizar tareas, resolver bloqueos técnicos de forma autónoma y a colaborar con un cliente real (ASPAYM), ajustando el desarrollo a sus necesidades y expectativas. Esta experiencia ha resaltado la importancia de la comunicación clara, la empatía con el usuario final y la capacidad de adaptación ante nuevos desafíos.
+
+Por último, este trabajo ha reforzado la idea de que la constancia y la disciplina son más determinantes que la motivación esporádica. La complejidad del desarrollo, junto con la responsabilidad de llevar a cabo un producto funcional en solitario, con todas las fases del desarrollo, ha permitido desarrollar una ética de trabajo sólida y resiliente. Aun así, destacar que la finalidad altruista de este proyecto ha motivado mucho, desde un principio, por sacar el proyecto adelante.
+
+\section{Líneas de trabajo futuras}
+
+El ámbito de la rehabilitación mediante realidad virtual continúa en expansión, y la integración de nuevas dinámicas interactivas, junto con la mejora técnica del sistema, puede marcar una diferencia significativa en su aplicabilidad real. Por ello, se plantean las siguientes líneas de trabajo que permitirían refinar, ampliar y optimizar la solución desarrollada. Estas propuestas se agrupan en diferentes categorías según su naturaleza.
+
+\subsection*{Diseño de nuevos puzles rehabilitadores}
+
+Hasta el momento, se ha implementado únicamente el primer ejercicio interactivo, \textit{El Palacio de Shahriar}, diseñado con prioridad alta por su aplicabilidad en etapas iniciales del proceso de rehabilitación. No obstante, el proyecto contempla la incorporación de un conjunto más amplio de puzles temáticos, que aporten diversidad y progresión en la dificultad. Las siguientes líneas de trabajo están orientadas a completar este objetivo:
+
+\begin{itemize}
+    \item \textbf{Desarrollar nuevos puzles:} completar los ejercicios restantes según la lista establecida por ASPAYM.
+    \item \textbf{Ajustar la dificultad progresiva:} diseñar cada puzle con niveles de exigencia crecientes, tanto a nivel cognitivo como motriz, adaptados a distintos perfiles de usuario.
+    \item \textbf{Incorporar nuevos tipos de interacción:} explorar otras mecánicas más avanzadas (por ejemplo, movimientos finos de muñeca o rotaciones) que complementen el rango de movimientos trabajados.
+\end{itemize}
+
+\subsection*{Interfaz y experiencia de usuario}
+
+Aunque la interfaz actual es completamente funcional y ha sido diseñada en base a criterios de accesibilidad, se han detectado oportunidades de mejora a nivel estético y de experiencia de usuario. Algunas líneas a considerar son:
+
+\begin{itemize}
+    \item \textbf{Revisión estética:} aplicar un rediseño visual de la interfaz, incorporando una paleta de colores más atractiva, iconografía adaptada y animaciones suaves que refuercen la inmersión.
+    \item \textbf{\textit{Feedback} adaptativo:} mejorar el sistema de retroalimentación visual y sonora en función del desempeño del usuario.
+    \item \textbf{Personalización de la experiencia:} permitir al usuario configurar preferencias como el volumen o idioma.
+\end{itemize}
+
+\subsection*{Rendimiento y optimización}
+
+Pese a los esfuerzos realizados en mejorar el rendimiento durante el desarrollo, es un área que siempre admite margen de mejora, especialmente en entornos de realidad virtual donde los recursos son limitados.
+
+\begin{itemize}
+    \item \textbf{Optimización del renderizado:} revisar los modelos y materiales utilizados para garantizar la máxima eficiencia sin comprometer la calidad visual.
+    \item \textbf{Reducción del consumo de memoria:} auditar el uso de texturas, sonidos y blueprints para identificar elementos innecesarios o duplicados.
+    \item \textbf{Pruebas de rendimiento sistemáticas:} implementar una batería de tests automatizados para comprobar la estabilidad del sistema en diferentes escenarios y niveles.
+\end{itemize}
+
+\subsection*{Incorporación de seguimiento de manos (\textit{hand tracking})}
+
+La incorporación de tecnologías de seguimiento de manos puede representar un salto cualitativo en cuanto a accesibilidad, naturalidad del movimiento y eliminación de barreras tecnológicas (como la necesidad de agarrar controladores físicos).
+
+\begin{itemize}
+    \item \textbf{Compatibilidad con hand tracking nativo:} adaptar las interacciones del sistema para que puedan ser ejecutadas sin controladores físicos, empleando directamente los gestos naturales de las manos del usuario.
+    \item \textbf{Diseño de gestos personalizados:} definir un conjunto de gestos que puedan ser utilizados en sustitución de acciones comunes como agarrar, seleccionar o mover objetos.
+    \item \textbf{Evaluación de precisión y robustez:} analizar la fiabilidad del reconocimiento en distintos entornos y condiciones de iluminación, y su impacto en el proceso de rehabilitación.
+\end{itemize}

@@ -27,7 +27,7 @@ Durante la reunión se marcaron los siguientes objetivos:
   principales, el flujo de navegación y la integración de los puzles.
 
 \item \textbf{Selección de gafas de realidad virtual:}
-  Acordar la versión de las gafas de \textit{RV} a utilizar y definir la  
+  Acordar la versión de las gafas de \textit{VR} a utilizar y definir la  
   preferencia basada en la compatibilidad, rendimiento y experiencia de usuario.
 \end{enumerate}
 
@@ -77,7 +77,7 @@ Durante esta reunión, se resolvieron  dudas sobre el sistema de registro que de
 Durante la reunión se marcaron los siguientes objetivos:
 \begin{enumerate}
   \item \textbf{Integración de interfaces a realidad virtual:}  
-    Adaptar y conectar todas las pantallas y controles del juego al entorno RV, garantizando la navegación y la interacción fluida.
+    Adaptar y conectar todas las pantallas y controles del juego al entorno VR, garantizando la navegación y la interacción fluida.
 
   \item \textbf{Contador de tiempo y almacenamiento de nivel:}  
     Implementar un temporizador que comience al iniciar el puzle y guarde el tiempo transcurrido junto con los datos del nivel creado en la sesión.
@@ -123,7 +123,7 @@ Durante la reunión se marcaron los siguientes objetivos:
 El \textit{sprint} se realizó entre el 23 de abril de 2025 y el 7 de mayo de 2025, con una duración de 14 días.
     \item {Burndown Report}
     
-En este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. La estimación de tiempo puede que fuera la correcta de nuevo, pero una vez más la falta del \textit{hardware} retrasa las pruebas del software debido a no tener acceso a unas gafas de realidad virtual por compatibilidad de horarios con los prestantes de las gafas de RV. Debido a que comencé las practicas y el horario establecido para que pudiese utilizar las gafas fue muy reducido, tome la decisión de pedirlas prestadas a un amigo para tener total disponibilidad de ellas y que el proyecto no se viese más atrasado por falta de material para las pruebas del código. 
+En este \textit{sprint} no se cumplió con los objetivos en el plazo determinado. La estimación de tiempo puede que fuera la correcta de nuevo, pero una vez más la falta del \textit{hardware} retrasa las pruebas del software debido a no tener acceso a unas gafas de realidad virtual por compatibilidad de horarios con los prestantes de las gafas de VR. Debido a que comencé las practicas y el horario establecido para que pudiese utilizar las gafas fue muy reducido, tome la decisión de pedirlas prestadas a un amigo para tener total disponibilidad de ellas y que el proyecto no se viese más atrasado por falta de material para las pruebas del código. 
 
 \end{itemize}
 
@@ -133,7 +133,7 @@ En este \textit{sprint} no se cumplió con los objetivos en el plazo determinado
 Durante la reunión se marcaron los siguientes objetivos:
 
 \begin{enumerate}
-\item \textbf{Implementación del sistema de apertura de caja con \textit{Palace\_Box\_Key}:}  
+\item \textbf{Implementación del sistema de apertura de caja con \texttt{Palace\_Box\_Key}:}  
   Diseñar e integrar la lógica necesaria para permitir la apertura de la caja mediante la llave correspondiente, incluyendo detección de colisiones y validación de acceso.
 
 \item \textbf{Mecánica de caña de pescar con efecto magnético:}  
@@ -142,11 +142,8 @@ Durante la reunión se marcaron los siguientes objetivos:
 \item \textbf{Animación y lógica de apertura de la caja:}  
   Crear la animación correspondiente a la apertura de la caja y programar la lógica asociada para que se ejecute correctamente tras el uso de la llave o resolución del candado.
 
-\item \textbf{Implementación del candado direccional:}  
-  Diseñar la secuencia de entrada direccional (ej. abajo, izquierda...) y su lógica de validación para desbloquear el acceso a la caja, con retroalimentación visual y sonora.
-
 \item \textbf{Obtención de la lámpara mágica:}  
-  Integrar el objeto "lámpara mágica" como recompensa al completar correctamente el puzle de la caja, incluyendo animación y lógica de recogida del objeto.
+  Integrar el objeto como recompensa al completar correctamente el puzle de la caja, incluyendo animación y lógica de recogida del objeto.
 \end{enumerate}
 
     \item {Duración del sprint:}
@@ -157,7 +154,7 @@ En este \textit{sprint} se cumplió con casi todos los objetivos en el plazo det
 
 \item {Sprint review meeting}
 Lo más destacable de esta reunión fue profundizar en la facilidad del puzle, focalizando sobre todo en la parte de los \textit{stickmans} para buscar una manera de que el usuario sepa identificar en que posición se deben de poner. Se opto por dejar la parte de la cabeza inmóvil. 
-
+\end{itemize}
 \subsection{\textbf{\textit{Sprint} 6: Palacio de Shahriar: Exportación de datos a CSV y pruebas }}
 \begin{itemize}
 \item {Planning meeting}:
@@ -192,72 +189,155 @@ El \textit{sprint } se realizó entre el 21 de mayo de 2025 y el 11 de junio de 
 En este \textit{sprint} se cumplió con todos los objetivos en el plazo determinado.
 
     \item {Sprint review meeting}
+En un principio se tenía estimado realizar otro puzle más, pero después de hablarlo y valorarlo se decidió no seguir ese plan y dedicar las últimas semanas al pulido de detalles y terminar la documentación.
+
 
 \end{itemize}
+
+\subsection{\textbf{\textit{Sprint} 7: 
+Documentación final y fase de pulido}}
+\begin{itemize}
+\item \textit{Planning meeting}:
+Durante la reunión de planificación del último \textit{sprint}, centrado en la documentación y el pulido final del proyecto, se establecieron los siguientes objetivos clave:
+
+\begin{enumerate}
+  \item \textbf{Mejora de la interfaz de usuario:}  
+    Se acordó realizar ajustes visuales finales que aumenten la claridad, accesibilidad y atractivo de la experiencia, como la reorganización de elementos gráficos, tamaños de fuente o disposición de los menús en \textit{VR}.
+
+  \item \textbf{Determinación definitiva de datos exportables:}  
+    Se propuso cerrar la definición de las métricas que serán registradas en el archivo \textit{CSV}, incluyendo aquellos datos que hasta ahora estaban pendientes.
+
+  \item \textbf{Empaquetado del proyecto:}  
+    Garantizar que la versión final del sistema esté correctamente empaquetada como ejecutable (\texttt{.exe}) para \textit{Windows}, con compatibilidad completa con \textit{Meta Quest Link} y sin dependencias externas no incluidas.
+
+  \item \textbf{Realización de pruebas funcionales y corrección de errores:}  
+    Llevar a cabo una batería final de pruebas sobre las funcionalidades principales —interacción con el entorno, guardado de progreso, exportación de métricas, desplazamiento del jugador— e identificar y corregir errores remanentes.
+
+  \item \textbf{Finalización de la documentación:}  
+    Redactar y estructurar adecuadamente todos los apartados pendientes de la memoria del \textit{TFG}
+\end{enumerate}
+
+    \item {Duración del sprint:}
+El \textit{sprint } se realizó entre el 11 de junio de 2025 y el 7 de julio de 2025, con una duración de 26 días.
+
+    \item {Burndown Report}
+En este \textit{sprint} se cumplió con todos los objetivos en el plazo determinado. Fue una fase larga donde se realizaron múltiple test de la aplicación, se termino de realizar la toma y exportado de datos a CSV y la correcta implementación del guardado y cargado, donde había varios \textit{bugs}.
+
+
+\end{itemize}
+
 
 \section{Estudio de viabilidad}
-La viabilidad del proyecto hace referencia a su capacidad para ser desarrollado con éxito, cumpliendo los objetivos propuestos dentro de las limitaciones técnicas, temporales y de recursos. Para determinar si es un proyecto factible, se llevará a cabo un análisis que aborde distintos aspectos clave como la viabilidad económica.
+Este apartado tiene como objetivo analizar la viabilidad económica del proyecto, evaluando los costes asociados a su desarrollo y lanzamiento. Dado que el proyecto se encuentra en el ámbito académico, no tiene fines comerciales ni busca obtener beneficios económicos, pero se realiza una estimación teórica de los recursos empleados.
+
 \subsection{Viabilidad económica}
-El proyecto se ha planteado teniendo en cuenta la optimización de los recursos disponibles, minimizando los costes mediante el uso de herramientas y equipamiento accesibles. A continuación, se detalla el análisis económico del proyecto, considerando tanto los recursos materiales como humanos.
 
-\subsubsection*{Recursos de hardware}
-\begin{itemize}
-  \item \textbf{Meta Quest 2}: El visor de realidad virtual empleado es de propiedad personal, por lo que no supone un coste adicional. En caso de requerir una estimación, su precio aproximado ronda los \textbf{350~€}.
+\subsubsection{Costes}
+El desarrollo del proyecto ha implicado una serie de costes que deben ser considerados para evaluar su viabilidad económica. En esta sección se detallan los diferentes componentes del coste total, incluyendo el coste de personal —tanto del desarrollador como de los tutores académicos—, el uso de hardware y software, así como otros costes indirectos derivados del uso de servicios básicos como la conexión a internet. La estimación se ha realizado teniendo en cuenta valores de mercado actuales y criterios de amortización razonables, con el fin de ofrecer una valoración lo más realista posible del esfuerzo económico asociado al desarrollo del proyecto.
 
-  \item \textbf{Ordenador de desarrollo}: Se utiliza un equipo personal con capacidad suficiente para ejecutar Unreal Engine, sin necesidad de adquirir nuevo hardware. Valor estimado: \textbf{1.300~€}.
-\end{itemize}
+\paragraph{Coste de personal}
+Se estima que el desarrollo del proyecto ha requerido unas 300 horas de trabajo, distribuidas a lo largo de aproximadamente 4 meses. Esto equivale a unas 18,75 horas semanales.
 
-\subsubsection*{Recursos de software}
-\begin{itemize}
-  \item \textbf{Unreal Engine 5}: Motor de desarrollo utilizado para la creación del entorno virtual. Se trata de una herramienta gratuita para uso académico y desarrollo de proyectos no comerciales.
+Considerando que un ingeniero informático recién titulado recibe un salario bruto mensual de aproximadamente 1\,900~€ por una jornada completa de 40 horas semanales, el salario mensual equivalente para 18,75 horas semanales sería:
 
-  \item \textbf{GitLab}: Se emplea como sistema de control de versiones y gestión de código. La cuenta utilizada es gratuita pero el repositorio se sitúa en un repositorio empresarial.
+\[
+\frac{1900~\text{€}}{40~\text{h}} \times 18{,}75~\text{h} = 890{,}63~\text{€}
+\]
 
-  \item \textbf{Herramientas auxiliares}: Como Visual Studio (versión Community gratuita) y Blender.
-\end{itemize}
-
-\subsubsection*{Costes de personal (estimación teórica)}
-Aunque el desarrollo del proyecto no conlleva gastos reales en personal, se realiza una estimación teórica para valorar el coste equivalente en un entorno profesional:
+Este será el salario bruto del desarrollador. Para obtener el coste real para la empresa, se aplican los siguientes porcentajes según el \textit{Régimen General de la Seguridad Social}\footnote{\url{https://www.seg-social.es/wps/portal/wss/internet/CotizacionRecaudacionTrabajadores/Cotizacion/27243}}:
 
 \begin{itemize}
-  \item \textbf{Desarrollador}: Se estima una dedicación total de 300 horas. Considerando una tarifa media de 20~€/hora para un perfil junior, el coste estimado sería de \textbf{6.000~€}.
-
-  \item \textbf{Supervisión de tutores}: Se realizaron un total de 8 reuniones de aproximadamente 40 minutos con 3 tutores. Esto supone un total de 16 horas de dedicación conjunta. Asumiendo un coste medio de 35~€/hora por tutor, el coste estimado de supervisión es de \textbf{1.680~€} (16 h × 35~€/h × 3 tutores).
+  \item Contingencias comunes: 23,60\% = 0,236
+  \item Mecanismo de Equidad Intergeneracional (MEI): 0,67\% = 0,0067
+  \item Desempleo: 5,50\% = 0,055
+  \item FOGASA: 0,20\% = 0,002
+  \item Formación profesional: 0,60\% = 0,006
 \end{itemize}
 
+Aplicando estos porcentajes:
 
-\begin{table}[p]
+\[
+890{,}63~\text{€} \times \left(1 + 0{,}236 + 0{,}0067 + 0{,}055 + 0{,}002 + 0{,}006\right) = 1\,162{,}22~\text{€}
+\]
+
+Multiplicando por los 4 meses de duración estimada del proyecto:
+
+\[
+1\,162{,}22~\text{€} \times 4 = 4\,648{,}88~\text{€}
+\]
+
+Además, se incluyen sesiones de seguimiento con los tutores del TFG. Se han realizado 8 reuniones de aproximadamente 40 minutos con 3 tutores, lo que suma un total de 16 horas de dedicación conjunta. El salario por hora de un docente con experiencia se estima en 35~€/h.
+
+\[
+16~\text{h} \times 35~\text{€/h} \times 3~\text{tutores} = 1\,680~\text{€} \text{ (bruto mensual)}
+\]
+
+Aplicando los mismos coeficientes para obtener el coste empresarial:
+
+\[
+1\,680~\text{€} \times \left(1 + 0{,}236 + 0{,}0067 + 0{,}055 + 0{,}002 + 0{,}006\right) = 2\,191{,}94~\text{€}
+\]
+
+\paragraph{Coste de hardware}
+El equipo de desarrollo utilizado ha sido un ordenador de uso personal, cuyo valor estimado es de 1\,300~€. Se amortiza a 5 años (60 meses), por lo que el coste atribuido a los 4 meses de duración del proyecto es:
+
+\[
+1\,300~\text{€} \times \frac{4}{60} = 86{,}67~\text{€}
+\]
+
+El visor de realidad virtual \textit{Meta Quest 2}, también de propiedad personal, tiene un valor de mercado estimado de 350~€, amortizable igualmente a 5 años:
+
+\[
+350~\text{€} \times \frac{4}{60} = 23{,}33~\text{€}
+\]
+
+\paragraph{Coste de software}
+Todas las herramientas empleadas son gratuitas para uso académico:
+
+\begin{itemize}
+  \item \textit{Unreal Engine 5}
+  \item \textit{Visual Studio Community}
+  \item \textit{Blender}
+\end{itemize}
+
+La única excepción es la suscripción empresarial a \textit{GitLab}, con un coste de 18~€/mes durante 4 meses:
+
+\[
+18~\text{€} \times 4 = 72~\text{€}
+\]
+
+\paragraph{Costes indirectos}
+Se considera una tarifa de conexión a internet de 28~€/mes durante 4 meses:
+
+\[
+28~\text{€} \times 4 = 112~\text{€}
+\]
+
+\subsubsection*{Resumen de costes}
+
+\begin{table}[H]
   \centering
-  {\small 
-  \begin{tabularx}{\linewidth}{
-    @{} >{\bfseries\arraybackslash}X
-    >{\raggedleft\arraybackslash}r
-    >{\raggedleft\arraybackslash}r
-    @{}}
+  \begin{tabularx}{\linewidth}{@{}Xrr@{}}
     \toprule
-    Concepto & Cantidad / Duración & Coste estimado (€) \\
+    \textbf{Concepto} & \textbf{Duración / Cantidad} & \textbf{Coste (€)} \\
     \midrule
-    \multicolumn{3}{l}{\textbf{Hardware}} \\
-    Meta Quest 2 & 1 unidad & 350,00 \\
-    Ordenador de desarrollo (uso general) & 1 unidad & 1 000,00 \\
+    \textbf{Personal} & & \\
+    Desarrollador & 4 meses & 4\,648{,}88 \\
+    Tutores & 16 horas & 2\,191{,}94 \\
+    \textbf{Hardware} & & \\
+    Ordenador de desarrollo (amortización) & 4 meses & 86{,}67 \\
+    Meta Quest 2 (amortización) & 4 meses & 23{,}33 \\
+    \textbf{Software} & & \\
+    GitLab (suscripción empresarial) & 4 meses & 72{,}00 \\
+    \textbf{Costes indirectos} & & \\
+    Internet & 4 meses & 112{,}00 \\
     \midrule
-    \multicolumn{3}{l}{\textbf{Software}} \\
-    Unreal Engine 5 & Gratuito & 0,00 \\
-    GitLab (suscripción empresarial) & 4 meses & 72,00 \\
-    Herramientas auxiliares (VS, Blender…) & Gratuito & 0,00 \\
-    \midrule
-    \multicolumn{3}{l}{\textbf{Coste de personal (estimación)}} \\
-    Desarrollador (300 h × 20 €/h) & 300 horas & 6 000,00 \\
-    Supervisión (3 tutores × 16 h × 35 €/h) & 48 horas & 1 680,00 \\
-    \midrule
-    \textbf{Total estimado} & & \textbf{9 102,00 €} \\
+    \textbf{Total estimado} & & \textbf{7\,134{,}82} \\
     \bottomrule
   \end{tabularx}
-  }
-  \caption[Costes del proyecto]{Resumen de costes estimados del proyecto.}
-  \label{tab:costes-generales}
+  \caption{Resumen de costes estimados del proyecto}
+  \label{tab:costes-finales}
 \end{table}
-
 
 
 \subsection*{Beneficios}
@@ -304,6 +384,14 @@ La documentación generada para el proyecto será publicada bajo la licencia \te
 \subsubsection{Cumplimiento de normativa de protección de datos}
 
 El proyecto no trata datos personales reales, ya que la aplicación está diseñada para no recoger ningún tipo de dato personal, tan solo datos sobre el progreso realizado en los puzles. Por tanto, no aplica el RGPD ni la LOPDGDD en este contexto.
+
+\subsection{Licencia de distribución de software}
+
+Tras el análisis de compatibilidad de licencias con las herramientas utilizadas en el desarrollo, se ha optado por distribuir el código fuente del proyecto bajo la licencia \textbf{MIT License}. Esta elección permite una reutilización amplia y flexible del código, incluso en proyectos comerciales o cerrados, siempre que se mantenga la atribución al autor original. 
+
+La \textit{MIT License} resulta especialmente adecuada para proyectos académicos y de investigación, ya que fomenta la difusión abierta del conocimiento sin imponer restricciones adicionales. Asimismo, es compatible con el uso del motor \textit{Unreal Engine}, cuyo entorno de desarrollo no impide la aplicación de licencias permisivas en el código propio del desarrollador.
+
+Esta decisión está alineada con el objetivo de facilitar la adopción, mejora y extensión del sistema por parte de terceros, incluyendo comunidades educativas, clínicas y entidades colaboradoras como ASPAYM. Se incluye el texto completo de la licencia en el repositorio del proyecto, junto con la atribución correspondiente en los archivos fuente principales.
 
 \begin{table}[p]
 	\centering

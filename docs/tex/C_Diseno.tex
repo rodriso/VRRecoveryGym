@@ -1,12 +1,196 @@
 \apendice{Especificación de diseño}
 
 \section{Introducción}
+La especificación de diseño es una descripción detallada de la estructura, el comportamiento y la interacción de los distintos componentes que conforman el producto \textit{software}. Su propósito es proporcionar una guía clara y precisa que permita comprender cómo se organiza internamente la aplicación, facilitando su desarrollo, mantenimiento y futuras ampliaciones.
+
+A continuación, se presentan los apartados que conforman la especificación de diseño de la aplicación.
 
 \section{Diseño de datos}
 
+El sistema de guardado del proyecto se basa en el uso de dos \textit{blueprints} derivados de la clase \textit{SaveGame} de \textit{Unreal Engine}: \texttt{BP\_PlayerSave} y \texttt{BP\_PalaceSave}. Estos permiten almacenar y recuperar el progreso tanto del jugador como del estado interno de cada entorno de puzles.
+
+\subsection*{BP\_PlayerSave}
+
+Este fichero guarda la información general del jugador y un resumen del estado de cada puzle registrado. Esta organización permite una gestión escalable y ordenada de múltiples partidas o sesiones por jugador, así como una rápida vinculación con el estado persistente de cada entorno.
+
+\subsection*{BP\_PalaceSave}
+
+Este fichero almacena el estado detallado de un puzle concreto, permitiendo restaurarlo exactamente al punto donde se dejó. Cada fichero de este tipo se corresponde con un índice único que lo vincula a una entrada de \texttt{BP\_PlayerSave}.
+
+Esta estructura permite una recuperación precisa del estado del puzle, incluyendo progresos parciales, posiciones intermedias de actores, y lógicas de desbloqueo complejas.
+
+\subsection*{Relación entre archivos de guardado}
+
+Cada elemento del array \texttt{PuzzleInfoArray} en \texttt{BP\_PlayerSave} se vincula con una única instancia de \texttt{BP\_PalaceSave} mediante el campo \texttt{Index}. De este modo, se mantiene una separación lógica entre los datos personales del jugador y el estado particular de cada entorno de juego, favoreciendo la modularidad y la mantenibilidad del sistema de persistencia.
+
+\subsection{Diccionario de datos}
+A continuación, se presentan los diccionarios de datos correspondientes a las estructuras \texttt{BP\_PlayerSave} y \texttt{BP\_PalaceSave}. Estas tablas describen los atributos almacenados en los archivos de guardado utilizados por la aplicación, especificando su tipo, posibles restricciones y una breve descripción de su función dentro del sistema.
+
+El objetivo de este esquema es facilitar la comprensión de la persistencia de datos implementada mediante \textit{blueprints} en \textit{Unreal Engine}, así como establecer una documentación clara de los elementos clave que intervienen en el proceso de guardado y carga de estado.
+
+\begin{table}[H]
+\centering
+\scalebox{0.85}{
+\begin{tabular}{@{}p{8em} p{8em} p{8em} p{20em}@{}}
+  \toprule
+  \textbf{Nombre} & \textbf{Tipo} & \textbf{Restricción} & \textbf{Descripción} \\
+  \midrule
+  \texttt{\textbf{PlayerName}} & \texttt{FString} & \texttt{NOT NULL} & Nombre introducido por el usuario en el registro.\\
+  \texttt{PuzzleInfoArray} & \texttt{TArray\allowbreak<\allowbreak FPuzzleInfo\allowbreak>} & \texttt{NOT NULL} & Array de estructuras que almacena la información resumida de cada puzle del jugador.\\
+  \midrule
+  \multicolumn{4}{l}{\textbf{Estructura \texttt{FPuzzleInfo}} (elementos del array \texttt{PuzzleInfoArray}):} \\
+  \texttt{\quad PuzzleName} & \texttt{FString} & \texttt{NOT NULL} & Nombre del puzle.\\
+  \texttt{\quad CreationDateTime} & \texttt{FDateTime} & \texttt{NOT NULL} & Fecha y hora de creación del puzle.\\
+  \texttt{\quad TimePlayed} & \texttt{float} & & Tiempo jugado acumulado.\\
+  \texttt{\quad Solved} & \texttt{bool} & & Indica si el puzle ha sido completado.\\
+  \texttt{\quad Index} & \texttt{int32} & \texttt{UNIQUE} & Índice que enlaza con el correspondiente \texttt{BP\_PalaceSave}.\\
+  \bottomrule
+\end{tabular}
+}
+\caption[Diccionario de datos: \texttt{BP\_PlayerSave}]{Diccionario de datos correspondiente a la clase \texttt{BP\_PlayerSave}.}
+\label{datadic:playersave}
+\end{table}
+
+\vspace{1em}
+
+\begin{table}[H]
+\centering
+\scalebox{0.85}{
+\begin{tabular}{@{}p{10em} p{7em} p{7em} p{20em}@{}}
+  \toprule
+  \textbf{Nombre} & \textbf{Tipo} & \textbf{Restricción} & \textbf{Descripción} \\
+  \midrule
+  \texttt{\textbf{Index}} & \texttt{int32} & \texttt{UNIQUE NOT NULL} & Índice de enlace con \texttt{BP\_PlayerSave}.\\
+  \texttt{StepsMade} & \texttt{int32} & & Número de pasos realizados por el jugador en las torres.\\
+  \texttt{Tower3Finished} & \texttt{bool} & & Indica si la torre 3 está completada.\\
+  \texttt{ActorsDestroyed} & \texttt{TArray<FName>} & & Lista de nombres de actores eliminados.\\
+  \texttt{ActualTime} & \texttt{float} & & Tiempo acumulado que lleva el puzle activo.\\
+  \texttt{ActorsHidden} & \texttt{TArray<FName>} & & Lista de actores ocultos en el entorno.\\
+  \texttt{Lock1Unlocked} & \texttt{bool} & & Estado del candado 1 (desbloqueado o no).\\
+  \texttt{Lock2Unlocked} & \texttt{bool} & & Estado del candado 2.\\
+  \texttt{OnlyRotationsActor} & \texttt{TMap<FName, FRotator>} & & Rotación de actores con etiqueta \texttt{SaveRotation}.\\
+  \texttt{StepsData} & \texttt{TArray<FStepData>} & & Información por torre: nombre y tiempo empleado.\\
+  \midrule
+  \multicolumn{4}{l}{\textbf{Estructura \texttt{FStepData}} (elementos del array \texttt{StepsData}):} \\
+  \texttt{\quad Name} & \texttt{FString} & \texttt{NOT NULL} & Nombre de la torre.\\
+  \texttt{\quad TimeToComplete} & \texttt{float} & & Tiempo requerido para completar la torre.\\
+  \bottomrule
+\end{tabular}
+}
+\caption[Diccionario de datos: \texttt{BP\_PalaceSave}]{Diccionario de datos correspondiente a la clase \texttt{BP\_PalaceSave}.}
+\label{datadic:palacesave}
+\end{table}
 \section{Diseño arquitectónico}
+El diseño arquitectónico del sistema establece la estructura general del proyecto, identificando los principales módulos funcionales, sus relaciones y la forma en la que interactúan para lograr los objetivos definidos. En este proyecto, la arquitectura se ha diseñado con un enfoque modular y escalable, facilitando la integración de nuevas funcionalidades y el mantenimiento del código.
+
+El sistema se ha desarrollado utilizando \textit{Unreal Engine 5}, por lo que la arquitectura se organiza en torno a clases y \textit{blueprints}, respetando el paradigma de programación orientada a objetos. Las clases clave se dividen en tres niveles: lógica de usuario, lógica de entorno y control de interacción.
+
+\subsection {Patrones de diseño}
+
+\subsection{Patrón \textit{Singleton}}
+
+Se implementa el patrón de diseño \textit{Singleton} mediante la clase \texttt{UInstance}, la cual hereda de \texttt{UGameInstance} en \textit{Unreal Engine}. Esta clase actúa como una instancia global accesible desde cualquier nivel o clase dentro del motor.
+
+El patrón \textit{Singleton} garantiza que sólo exista una única instancia de esta clase durante toda la ejecución del juego, y que todas las clases del sistema puedan acceder a ella de manera controlada. Esta instancia persiste entre cambios de nivel, lo que permite compartir datos sin pérdida de información.
+
+
+\textbf{Responsabilidades de la clase \texttt{UInstance} en el proyecto:}
+\begin{itemize}
+    \item Gestionar el acceso centralizado al \textit{SaveGame} cargado, conteniendo los datos del usuario.
+    \item Almacenar y compartir variables globales (por ejemplo, puntuaciones, tiempo total de actividad, nivel de dificultad, estadísticas de movimiento, etc.).
+    \item Servir de punto de comunicación entre niveles y sistemas desacoplados dentro del entorno VR.
+\end{itemize}
+
+\textbf{Ventajas del uso del \textit{Singleton} en este contexto:}
+\begin{itemize}
+    \item Evita la necesidad de pasar referencias entre niveles o clases.
+    \item Mejora la organización y consistencia del estado global del juego.
+    \item Asegura la integridad de los datos compartidos entre escenas.
+\end{itemize}
+
+Este uso del patrón \textit{Singleton} es coherente con las mejores prácticas de diseño en \textit{Unreal Engine}, y resulta especialmente útil en aplicaciones donde la continuidad del estado entre escenarios es esencial para la experiencia del usuario.
+
+\begin{figure}[h]
+	\caption[Ejemplo de singleton]{Ejemplo del patrón singleton en el proyecto.}
+	\centering
+	\includegraphics[width=\textwidth]{../img/anexos/ejemplo_singleton.png}
+	\label{b:ejemplo_singleton}
+\end{figure}
+
+\subsection{Patrón \textit{Command}}
+
+El patrón de diseño \textit{Command} se aplica para gestionar acciones que deben ejecutarse como respuesta a condiciones específicas del entorno de juego, manteniendo bajo acoplamiento entre los objetos emisores y receptores.
+
+Este patrón encapsula una petición (acción) como un objeto, permitiendo su almacenamiento, programación o ejecución diferida. En Unreal Engine, esta lógica se implementa comúnmente mediante \textit{event dispatchers} o \textit{delegates}, herramientas que permiten vincular eventos con funciones de manera flexible.
+
+Ejemplos concretos en el proyecto:
+\begin{itemize}
+    \item \textbf{Evento de apertura de caja:} Cuando todos los candados están resueltos, se emite un evento que ejecuta la animación de apertura de la caja. El objeto ``candado`` no necesita conocer directamente la lógica interna de la caja, sólo invocar el comando asociado.
+    
+    \item \textbf{Evento de finalización del juego:} Al cumplirse los criterios de éxito de la tarea motriz, se lanza un comando que activa la animación final, la recolección de métricas y la transición de nivel. Todo ello está encapsulado en un conjunto de acciones invocadas como comandos.
+\end{itemize}
+
+\textbf{Ventajas en el contexto del proyecto:}
+\begin{itemize}
+    \item Desacopla la lógica de condición (candado, éxito, tiempo, etc.) de la lógica de ejecución.
+    \item Permite reutilizar, programar o modificar comandos sin afectar el código fuente de los objetos emisores.
+    \item Facilita la modularidad y mantenimiento del sistema VR, donde múltiples interacciones generan eventos secuenciados.
+\end{itemize}
+
+\begin{figure}[h]
+	\caption[Ejemplo de command]{Ejemplo del patrón \textit{command} en el proyecto.}
+	\centering
+	\includegraphics[width=\textwidth]{../img/anexos/ejemplo_patron_command.png}
+	\label{b:ejemplo_command}
+\end{figure}
+
+
+\subsection*{Despliegue}
+
+La aplicación está diseñada para ejecutarse como una aplicación de escritorio en sistemas operativos Windows. El entorno de realidad virtual se experimenta a través del visor \textit{Meta Quest 2}, utilizando la funcionalidad \textit{Meta Quest Link}, que permite al dispositivo actuar como pantalla y controlador de entrada para el equipo principal.
+
+El proceso de despliegue y ejecución sigue los siguientes pasos:
+
+\begin{enumerate}
+  \item El proyecto se compila en \texttt{Unreal Engine 5} en formato ejecutable \texttt{.exe} para Windows, utilizando el modo \texttt{VR Preview} para pruebas o el empaquetado estándar para distribución.
+  \item El visor \textit{Meta Quest 2} se conecta al ordenador mediante cable USB o por conexión inalámbrica compatible (\textit{Air Link}), utilizando la funcionalidad \textit{Meta Quest Link} para emular una pantalla secundaria en realidad virtual.
+  \item Al ejecutar la aplicación en el equipo, el usuario puede visualizar e interactuar con el entorno virtual desde el visor, con seguimiento completo de movimiento y controladores hápticos.
+\end{enumerate}
+
+Este enfoque de despliegue permite aprovechar toda la potencia gráfica del equipo de desarrollo, eliminando las limitaciones de hardware del visor autónomo. Además, facilita el desarrollo iterativo, la depuración en tiempo real y el uso de recursos más exigentes sin afectar al rendimiento.
 
 \section{Diseño procedimental}
 
+En el desarrollo de \textit{software}, el diseño procedimental hace referencia a la definición estructurada y detallada de los pasos necesarios para llevar a cabo funcionalidades concretas dentro de la aplicación. Este enfoque se basa en la descomposición del problema en tareas elementales y secuenciales que, en conjunto, permiten alcanzar un objetivo funcional específico.
 
+En el presente proyecto, el diseño procedimental se ha representado mediante diagramas de secuencia siguiendo la notación de \textit{UML 2}. Estos diagramas permiten visualizar la interacción entre los distintos componentes del sistema —clases, \textit{blueprints}, interfaces de usuario y controladores de entorno— durante la ejecución de los distintos procesos clave de la aplicación.
 
+A continuación, se muestran los diagramas correspondientes a algunas de las funcionalidades principales del sistema, como el proceso de guardado de estado, la carga de partidas, o la gestión de eventos dentro de los puzles, con el objetivo de facilitar la comprensión de su comportamiento dinámico.
+
+\subsection{Registro}
+En el diagrama de secuencia \ref{fig:diagrama_secuencia_registro} se muestran los pasos que sigue el programa al registrarse por primera vez:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{../img/anexos/diagrama_secuencia_registro.png}
+    \caption[Diagrama de secuencia de registro]{Diagrama de secuencia del registro por primera vez}
+    \label{fig:diagrama_secuencia_registro}
+\end{figure}
+
+\subsection{Crear nueva partida}
+En el diagrama de secuencia \ref{fig:diagrama_secuencia_nuevopuzle} se muestran los pasos que sigue el programa al crear un nuevo puzle.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{../img/anexos/diagrama_secuencia_nuevopuzle.png}
+    \caption[Diagrama de secuencia de nueva partida]{Diagrama de secuencia de nueva partida}
+    \label{fig:diagrama_secuencia_nuevopuzle}
+\end{figure}
+
+\subsection{Cargado de partida}
+En el diagrama de secuencia \ref{fig:diagrama_secuencia_cargado} se muestran los pasos que sigue el programa para cargar un puzle.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.40]{../img/anexos/diagrama_secuencia_carga.png}
+    \caption[Diagrama de secuencia cargado de partida]{Diagrama de secuencia de cargado de partida}
+    \label{fig:diagrama_secuencia_cargado}
+\end{figure}
