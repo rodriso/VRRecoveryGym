@@ -31,8 +31,8 @@ Feel free to contact me for any questions.
 ⚖️ [MIT](https://gitlab.com/HP-SCDS/Observatorio/2024-2025/vrrecoverygym/ubu-vrrecoverygym/-/blob/017b396afd3b4bb5e5fa4283dea1fe482b445a0a/LICENSE)
 
 ## In collaboration with
-![Logo HPSCDS](https://pcs.usal.es/wp-content/uploads/2024/05/logo_hpscds.png)
-![Logo ASPAYM](https://www.aspaymcyl.org/wp-content/images/img_web/Logo_ASPAYM_2022.png)
+<img src="https://hpscds.com/wp-content/uploads/2025/03/logo__hpscds_color-1.svg" alt="Logo HPSCDS" width="200"/>
+<img src="https://www.aspaymcyl.org/wp-content/images/img_web/Logo_ASPAYM_2022.png" alt="Logo ASPAYM" width="150"/>
 
 ## Logo image
 
